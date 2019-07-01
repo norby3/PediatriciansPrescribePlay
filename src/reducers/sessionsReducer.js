@@ -15,11 +15,16 @@ export default function(state = sessionsState, action) {
         ...state,
         ...action.payload
       };
-    // case SET_CELLPHONE_AND_PASSWORD:
-    //   return {
-    //     ...state,
-    //     cellphone: action.payload.cellphone,
-    //   };
+    case ADD_PLAYERS_TO_SESSION:
+      console.log(`sessionsReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
+      let stateCopy = [...state];
+      let currentSession = stateCopy.pop();
+      currentSession = {
+        ...currentSession,
+        players: action.payload
+      };
+      return stateCopy.concat(currentSession);
+
     // case NEW_ADULT:
     //   return {
     //     ...state,

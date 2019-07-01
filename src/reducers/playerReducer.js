@@ -17,8 +17,7 @@ export default function(state = playersState, action) {
         totalScoreZoo: 1,
         totalScorePlay: 0
       };
-      console.log('debug alpha');
-      return state.concat([], newPlayerAdult);
+      return state.concat(newPlayerAdult);
     case NEW_CHILD:
       console.log(`playerReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
       let newPlayerChild = {
@@ -27,10 +26,7 @@ export default function(state = playersState, action) {
         totalScoreZoo: 1,
         totalScorePlay: 0
       };
-      console.log('debug bravo');
-      //return state.concat(state, newPlayerChild);
       return state.concat(newPlayerChild);
-
     default:
       return state;
   }

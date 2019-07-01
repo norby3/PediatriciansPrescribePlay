@@ -11,6 +11,10 @@ import IntroVideo from './src/onboard/IntroVideo';
 import Home from './src/Home';
 import ChoosePlayers from './src/ChoosePlayers';
 
+import MyZoo from './src/zoo/MyZoo';
+import Activity from './src/zoo/Activity';
+import MiniBreak from './src/zoo/MiniBreak';
+
 const OnboardingStack = createStackNavigator({
     GeisingerLocation: { screen: GeisingerLocation },
     AdultSignup: { screen: AdultSignup },
@@ -23,14 +27,23 @@ const OnboardingStack = createStackNavigator({
 const HomeStack = createStackNavigator({
     Home: { screen: Home },
     ChoosePlayers: { screen: ChoosePlayers },
-
+    //AddPlayer: { screen: AddPlayer },
   }, { initialRouteName: 'Home' }
+);
+
+const MyZooStack = createStackNavigator({
+    MyZoo: { screen: MyZoo },
+    Activity: { screen: Activity },
+    MiniBreak: { screen: MiniBreak },
+  }, { initialRouteName: 'MyZoo' }
 );
 
 const SwitchNavigator = createSwitchNavigator({
     LoadingScreen: LoadingScreen,
     OnboardingStack: OnboardingStack ,
     HomeStack: HomeStack,
+    MyZooStack: MyZooStack,
+
   }, { initialRouteName: 'LoadingScreen' }
 );
 

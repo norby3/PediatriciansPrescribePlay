@@ -1,6 +1,6 @@
 import {
   NEW_SESSION,
-  //ADD_PLAYERS_TO_SESSION,
+  ADD_PLAYERS_TO_SESSION,
   //UPDATE_GAME_STATUS_IN_SESSION,
 } from './types';
 
@@ -9,6 +9,14 @@ export const newSession = (inputData) => dispatch => {
   console.log('sessionActions.newSession');
   dispatch({
     type: NEW_SESSION,
+    payload: inputData
+  });
+}
+
+export const addPlayersToSession = (inputData) => dispatch => {
+  console.log('sessionActions.addPlayersToSession');
+  dispatch({
+    type: ADD_PLAYERS_TO_SESSION,
     payload: inputData
   });
 }
