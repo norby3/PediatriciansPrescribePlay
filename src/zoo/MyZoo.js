@@ -9,12 +9,12 @@ import {
   View,
  }                          from 'react-native';
 import Image from 'react-native-scalable-image';
-import {
-  getUserData,
-  getUserDataCheckNewSession,
-}                         from '../shared/UserDataFunctions.js';
+// import {
+//   getUserData,
+//   getUserDataCheckNewSession,
+// }                         from '../shared/UserDataFunctions.js';
 import { animalGifs }     from '../shared/AnimalGifs.js';
-import { withNavigation } from "react-navigation";
+//import { withNavigation } from "react-navigation";
 
 const { width, height } = Dimensions.get('window');
 
@@ -56,38 +56,34 @@ class MyZoo extends Component {
   //   console.log(`MyZoo zooData: ${JSON.stringify(zooData)}`);
   // }
 
-  async componentWillMount() {
+  componentWillMount() {
     console.log(`componentWillMount started`);
 
-    let userData = await getUserDataCheckNewSession();
+    let session = this.props.sessions[this.props.sessions.length-1];
+    console.log(`componentWillMount session = ${JSON.stringify(session)}`);
 
-    if(userData.zooAnimalCount){
-      this.setState({
-        zooAnimalCount: userData.zooAnimalCount,
-        zooHasNewAnimal: userData.zooHasNewAnimal,
-        childFirstName: userData.childFirstName,
-        userData: userData,
-      });
-    } else {
-      this.setState({
-        childFirstName: userData.childFirstName
-      });
-    }
-  }
-
-  reloadData = async() => {
-    console.log(`MyZoo.reloadData started`);
-
-    let userData = await getUserData();
-
-    await this.setState({
-      zooAnimalCount: userData.zooAnimalCount,
-      zooHasNewAnimal: userData.zooHasNewAnimal,
-      childFirstName: userData.childFirstName,
-      userData: userData,
-      reloadData: false,
+    this.setState({
+      zooAnimalCount: this.props.players[1].totalScoreZoo,
+      zooHasNewAnimal: session.zooHasNewAnimal,
+      childFirstName: session.players[1].name,
     });
+
   }
+
+  // reloadData = async() => {
+  //   console.log(`MyZoo.reloadData started`);
+  //
+  //   let userData = await getUserData();
+  //
+  //   await this.setState({
+  //     zooAnimalCount: userData.zooAnimalCount,
+  //     zooHasNewAnimal: userData.zooHasNewAnimal,
+  //     childFirstName: userData.childFirstName,
+  //     userData: userData,
+  //     reloadData: false,
+  //   });
+  //
+  // }
 
   onPress = () => {
     //console.log('go!');
@@ -144,11 +140,23 @@ class MyZoo extends Component {
           <Text>&nbsp;</Text>
           <Text>&nbsp;</Text>
 
-
         </View>
 
       </ScrollView>
     );
   }
 }
-export default withNavigation(MyZoo);
+//export default withNavigation(MyZoo);
+
+// MyZoo.propTypes = {
+//   newAdult: PropTypes.func.isRequired,
+// };
+
+const mapStateToProps = state => ({
+  family: state.family,
+  viewControl: state.viewControl,
+  players: state.players,
+  sessions: state.sessions,
+});
+
+export default connect(mapStateToProps, {})(MyZoo);

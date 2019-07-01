@@ -11,10 +11,7 @@ export default function(state = sessionsState, action) {
   switch(action.type) {
     case NEW_SESSION:
       console.log(`sessionsReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
-      return {
-        ...state,
-        ...action.payload
-      };
+      return state.concat(action.payload);
     case ADD_PLAYERS_TO_SESSION:
       console.log(`sessionsReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
       let stateCopy = [...state];

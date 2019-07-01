@@ -32,7 +32,9 @@ class Home extends Component {
     this.props.newSession({
       game: game,
       createdAtLocalTimezone: now.toString(),
-      createdAtUTC: now.toUTCString()
+      createdAtUTC: now.toUTCString(),
+      zooHasNewAnimal: false,
+      zooAnimalCount: 1,
     });
 
     this.props.navigation.navigate('ChoosePlayers');
