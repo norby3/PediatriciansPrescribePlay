@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from '../../Style'
+import styles from '../../styles'
 import { Dimensions }       from 'react-native';
 import Image from 'react-native-scalable-image';
 

@@ -33,8 +33,11 @@ class Home extends Component {
       game: game,
       createdAtLocalTimezone: now.toString(),
       createdAtUTC: now.toUTCString(),
+      zooGoalCounter: 6,
+      zooActivityCounter: 1,
       zooHasNewAnimal: false,
       zooAnimalCount: 1,
+      players: [this.props.players[1].name],
     });
 
     this.props.navigation.navigate('ChoosePlayers');
@@ -60,7 +63,9 @@ class Home extends Component {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={styles.wideButton}
+            //style={styles.wideButton}
+            style={[styles.playerBut, styles.disabledLook] }
+
             onPress={(event) => this.handleSubmit(event, "MyPlay")}
             ref={(input) => { this.nextButton = input }}
           >

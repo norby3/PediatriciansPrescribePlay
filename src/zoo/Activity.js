@@ -7,12 +7,15 @@ import {
   Text,
   View
  }                          from 'react-native';
- import {
-   getUserData,
-   updateZooActivityCounter,
-   animalAddedToZoo,
- }                         from '../shared/UserDataFunctions.js';
- import { withNavigationFocus } from 'react-navigation';
+ // import {
+ //   getUserData,
+ //   updateZooActivityCounter,
+ //   animalAddedToZoo,
+ // }                         from '../shared/UserDataFunctions.js';
+import { withNavigationFocus } from 'react-navigation';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+//import { updateSession } from '../actions/sessionActions';
 
 import { RNCamera } from 'react-native-camera';
 import Video from 'react-native-video';
@@ -22,6 +25,10 @@ const splitPanelHeight = height * 0.40;
 
 //export default class Activity extends Component {
 class Activity extends Component {
+  static navigationOptions = {
+         title: "Follow Me",
+    headerLeft: null,
+  };
 
   constructor(props) {
     super(props);
@@ -31,46 +38,45 @@ class Activity extends Component {
     }
   }
 
-  static navigationOptions = {
-         title: "Follow Me",
-    headerLeft: null,
-  };
+  componentWillMount() {
 
-  gotoNext = async() => {
-    console.log('Activity.js gotoNext started');
-
-    this.setState({zooActivityCounter: this.state.zooActivityCounter + 1});
-
-    // two choices - MiniBreak or back to MyZoo
-    if(this.state.zooGoalCounter === this.state.zooActivityCounter) {
-      await animalAddedToZoo();
-      this.props.navigation.navigate('MyZoo');
-    } else {
-      await updateZooActivityCounter();
-      this.props.navigation.navigate('MiniBreak',
-        { zooAnimalCount: this.state.zooAnimalCount,
-          zooActivityCounter: this.state.zooActivityCounter});
-    }
-  }
-
-  async componentDidMount() {
-    console.log('Activity.js componentDidMount');
-    let userData = await getUserData();
-
-    // this.setState({userData: userData,
-    //                 session: userData.sessions[userData.sessions.length-1],
-    //      zooActivityCounter: session.zooActivityCounter,
-    //                });
+    let session = this.props.sessions[this.props.sessions.length-1];
+    console.log(`Activity.js componentWillMount session = ${JSON.stringify(session)}`);
 
     this.setState({
-              session: userData.sessions[userData.sessions.length-1],
-   zooActivityCounter: userData.sessions[userData.sessions.length-1].zooActivityCounter,
-       zooAnimalCount: userData.zooAnimalCount,
-                   });
+      zooActivityCounter: session.zooActivityCounter,
+      zooAnimalCount: session.zooAnimalCount,
+    });
 
   }
 
-//  chooseVideo = (counter) => {
+  gotoNext = () => {
+    console.log('Activity.js gotoNext started');
+
+    this.props.navigation.navigate('MiniBreak',
+      { zooAnimalCount: this.state.zooAnimalCount,
+        zooActivityCounter: this.state.zooActivityCounter});
+  }
+
+
+  // gotoNext = async() => {
+  //   console.log('Activity.js gotoNext started');
+  //
+  //   this.setState({zooActivityCounter: this.state.zooActivityCounter + 1});
+  //
+  //   // two choices - MiniBreak or back to MyZoo
+  //   if(this.state.zooGoalCounter === this.state.zooActivityCounter) {
+  //     await animalAddedToZoo();
+  //     this.props.navigation.navigate('MyZoo');
+  //   } else {
+  //     await updateZooActivityCounter();
+  //     this.props.navigation.navigate('MiniBreak',
+  //       { zooAnimalCount: this.state.zooAnimalCount,
+  //         zooActivityCounter: this.state.zooActivityCounter});
+  //   }
+  // }
+
+
   chooseVideo = () => {
 
     switch(this.state.zooActivityCounter) {
@@ -216,4 +222,13 @@ class Activity extends Component {
   }
 }
 
-export default withNavigationFocus(Activity);
+//export default withNavigationFocus(Activity);
+
+const mapStateToProps = state => ({
+  //family: state.family,
+  viewControl: state.viewControl,
+  players: state.players,
+  sessions: state.sessions,
+});
+
+export default connect(mapStateToProps, {})(withNavigationFocus(Activity));
