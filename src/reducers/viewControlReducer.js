@@ -3,6 +3,8 @@ import {
   SET_CELLPHONE_AND_PASSWORD,
   NEW_ADULT,
   NEW_CHILD,
+  SET_GAME,
+  SET_PLAYERS,
 } from '../actions/types';
 
 const viewControllerState = {
@@ -14,7 +16,8 @@ const viewControllerState = {
   isOnboard3AdultInfoComplete: false,
   isOnboard4ChildInfoComplete: false,
   isOnboardComplete: false,
-  game: 'Zoo'                           // 'Zoo' or 'Play'
+  //game: 'MyZoo',                           // 'Zoo' or 'Play'
+  //players: [],
 };
 
 export default function(state = viewControllerState, action) {
@@ -49,6 +52,17 @@ export default function(state = viewControllerState, action) {
         currentView: 'Home',
         lastView: 'IntroVideo',
       };
+    case SET_GAME:
+      return {
+        ...state,
+        game: action.payload.game,
+      };
+    case SET_PLAYERS:
+      return {
+        ...state,
+        players: action.payload.players,
+      };
+
     // revisit: what about IntroVideo ?
     default:
       return state;

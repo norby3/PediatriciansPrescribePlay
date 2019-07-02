@@ -15,7 +15,7 @@ import {
 } from 'react-native-elements';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addPlayersToSession } from './actions/sessionActions';
+import { setPlayers } from './actions/viewControlActions';
 
 class ChoosePlayers extends React.Component {
   static navigationOptions = {
@@ -28,16 +28,9 @@ class ChoosePlayers extends React.Component {
 
     this.state = {
       players: [],
-      game: '',
+      game: this.props.viewControl.game,
     }
   };
-
-  componentWillMount = () => {
-    //let game = this.props.sessions[this.props.sessions.length-1].game;
-    let session = this.props.sessions[this.props.sessions.length-1];
-    console.log(`componentWillMount session = ${JSON.stringify(session)}`);
-    this.setState({game: session.game});
-  }
 
   playerSelected() {
     //console.log(`this.state.phone.length == 10 ${this.state.phone.length == 10}`);
@@ -127,8 +120,8 @@ class ChoosePlayers extends React.Component {
   }
 
   gotoNext = () => {
-    // update the players in the session
-    this.props.addPlayersToSession(this.state.players);
+    // update the players in app's state viewControl
+    this.props.setPlayers({players: this.state.players});
 
     if (this.state.game === 'MyZoo') {
       this.props.navigation.navigate('MyZooStack');
@@ -139,6 +132,7 @@ class ChoosePlayers extends React.Component {
 
   render() {
     console.log(`ChoosePlayers this.props: ${JSON.stringify(this.props)}`);
+    console.log(`ChoosePlayers this.state: ${JSON.stringify(this.state)}`);
 
     return (
       <View style={styles.outerView3}>
@@ -162,7 +156,7 @@ class ChoosePlayers extends React.Component {
 }
 
 ChoosePlayers.propTypes = {
-  addPlayersToSession: PropTypes.func.isRequired
+  setPlayers: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -172,4 +166,4 @@ const mapStateToProps = state => ({
   family: state.family
 });
 
-export default connect(mapStateToProps, {addPlayersToSession})(ChoosePlayers);
+export default connect(mapStateToProps, {setPlayers})(ChoosePlayers);

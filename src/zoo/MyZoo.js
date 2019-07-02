@@ -9,15 +9,11 @@ import {
   View,
  }                          from 'react-native';
 import Image from 'react-native-scalable-image';
-// import {
-//   getUserData,
-//   getUserDataCheckNewSession,
-// }                         from '../shared/UserDataFunctions.js';
 import { animalGifs }     from './AnimalGifs.js';
 import { withNavigation } from "react-navigation";
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-
+import { newSession } from '../actions/sessionActions';
 
 const { width, height } = Dimensions.get('window');
 
@@ -27,9 +23,8 @@ class MyZoo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      zooAnimalCount: 1,
-      childFirstName: 'My',
-         refreshData: false,
+      totalScoreZoo: 1,
+      childFirstName: this.props.family.childFirstName,
     }
   }
 
@@ -37,6 +32,12 @@ class MyZoo extends Component {
          title: null,
     headerLeft: null,
   };
+
+  // componentWillMount() {
+  //   let players = this.props.navigation.getParam('players');
+  //   console.log(`MyZoo.componentWillMount players = ${JSON.stringify(players)}`);
+  //   this.setState({childFirstName: players[0].name});
+  // }
 
   componentDidMount() {
     const { navigation } = this.props;
@@ -54,9 +55,9 @@ class MyZoo extends Component {
     let session = this.props.sessions[this.props.sessions.length-1];
     console.log(`MyZoo reloadData session = ${JSON.stringify(session)}`);
 
-    this.setState({
+    await this.setState({
       //zooAnimalCount: this.props.players[1].totalScoreZoo,
-      zooAnimalCount: session.zooAnimalCount,
+      //zooAnimalCount: session.zooAnimalCount,
       zooHasNewAnimal: session.zooHasNewAnimal,
       childFirstName: session.players[0].name,
     });
@@ -67,44 +68,30 @@ class MyZoo extends Component {
     this.focusListener.remove();
   }
 
-  // async componentWillMount() {
-  //   console.log('started componentWillMount');
-  //   let zooData = await getZooData();
-  //   console.log(`MyZoo zooData: ${JSON.stringify(zooData)}`);
-  // }
+  onPress = () => {
+    // create a NEW_SESSION
+    let nowMillis = Date.now();
+    let now = new Date(nowMillis);
 
-  componentWillMount() {
-    console.log(`MyZoo componentWillMount started`);
-
-    let session = this.props.sessions[this.props.sessions.length-1];
-    console.log(`MyZoo componentWillMount session = ${JSON.stringify(session)}`);
-
-    this.setState({
-      //zooAnimalCount: this.props.players[1].totalScoreZoo,
-      zooAnimalCount: this.state.zooAnimalCount,
-      zooHasNewAnimal: session.zooHasNewAnimal,
-      childFirstName: session.players[0].name,
+    this.props.newSession({
+      game: this.props.viewControl.game,
+      players: this.props.viewControl.players,
+      createdAtLocalTimezone: now.toString(),
+      createdAtUTC: now.toUTCString(),
+      zooGoalCounter: 6,
+      zooActivityCounter: 1,
+      zooHasNewAnimal: false,
+      zooAnimalCount: 1,                    // fix this
     });
 
-  }
-
-  onPress = () => {
-    //console.log('go!');
-    try {
-
-      this.setState({refreshData: true},
-        () => this.props.navigation.navigate('Activity'));
-
-    } catch (e) {
-      alert(e.message);
-    }
+    this.props.navigation.navigate('Activity');
   }
 
   getZooAnimals = () => {
     let gifs = [];
 
     //for(let i=0; i <= 5; i++) {
-    for(let i=0; i < this.state.zooAnimalCount; i++) {
+    for(let i=0; i < this.state.totalScoreZoo; i++) {
       gifs.push(animalGifs[i]);
     }
     return gifs;
@@ -118,7 +105,7 @@ class MyZoo extends Component {
 
         <View style={styles.myZooView}>
           <Text style={styles.coreLoopText1}>
-            {this.state.childFirstName? this.state.childFirstName : 'My'} Zoo</Text>
+            {this.state.childFirstName? `${this.state.childFirstName}'s` : 'My'} Zoo</Text>
 
           <Text>&nbsp;</Text>
 
@@ -132,13 +119,13 @@ class MyZoo extends Component {
           <Text>&nbsp;</Text>
           <Text>&nbsp;</Text>
           <Text style={styles.coreLoopText1}>
-            Zoo Animals = {this.state.zooAnimalCount}
+            Zoo Animals = {this.state.totalScoreZoo}
           </Text>
           <TouchableOpacity
             style={styles.bigBut2}
             onPress={this.onPress}
             >
-            <Text style={styles.bigButTxt}> Add Animal </Text>
+            <Text style={styles.bigButTxt}>Add Animal</Text>
           </TouchableOpacity>
           <Text>&nbsp;</Text>
           <Text>&nbsp;</Text>
@@ -151,9 +138,9 @@ class MyZoo extends Component {
 }
 //export default withNavigation(MyZoo);
 
-// MyZoo.propTypes = {
-//   newAdult: PropTypes.func.isRequired,
-// };
+MyZoo.propTypes = {
+  newSession: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
   family: state.family,
@@ -163,4 +150,4 @@ const mapStateToProps = state => ({
 });
 
 //export default connect(mapStateToProps, {})(MyZoo);
-export default connect(mapStateToProps, {})(withNavigation(MyZoo));
+export default connect(mapStateToProps, {newSession})(withNavigation(MyZoo));

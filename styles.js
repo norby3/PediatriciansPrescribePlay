@@ -427,6 +427,13 @@ export default StyleSheet.create({
     fontSize: 12,
     color: 'gray',
   },
+  devOnlyText2: {
+    fontSize: 12,
+    color: 'gray',
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+
   wideButton: {
     marginVertical: 20,
     width: width,

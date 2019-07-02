@@ -15,7 +15,7 @@ import {
 import { withNavigationFocus } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-//import { updateSession } from '../actions/sessionActions';
+import { updateSession, completeSession } from '../actions/sessionActions';
 
 import { RNCamera } from 'react-native-camera';
 import Video from 'react-native-video';
@@ -38,44 +38,70 @@ class Activity extends Component {
     }
   }
 
+  // componentWillMount() {
+  //   let session = this.props.sessions[this.props.sessions.length-1];
+  //   console.log(`Activity.js componentWillMount session = ${JSON.stringify(session)}`);
+  //
+  //   this.setState({
+  //     zooActivityCounter: session.zooActivityCounter,
+  //     zooAnimalCount: session.zooAnimalCount,
+  //   });
+  //
+  // }
   componentWillMount() {
+    const { navigation } = this.props;
+    this.focusListener = navigation.addListener("didFocus", () => {
+      // The screen is focused
+      console.log('Activity didFocus listener started');
+      // Call any action
+      this.reloadData();
+    });
+  }
+
+  reloadData = async() => {
+    console.log(`Activity.reloadData started`);
 
     let session = this.props.sessions[this.props.sessions.length-1];
-    console.log(`Activity.js componentWillMount session = ${JSON.stringify(session)}`);
+    console.log(`Activity reloadData session = ${JSON.stringify(session)}`);
 
-    this.setState({
+    await this.setState({
       zooActivityCounter: session.zooActivityCounter,
-      zooAnimalCount: session.zooAnimalCount,
+      zooAnimalCount: session.zooAnimalCount
     });
+  }
+
+  componentWillUnmount() {
+    // Remove the event listener
+    this.focusListener.remove();
+  }
+
+  componentDidMount() {
+    console.log(`Activity.js componentDidMount ${Date.now()}`);
 
   }
 
   gotoNext = () => {
     console.log('Activity.js gotoNext started');
 
-    this.props.navigation.navigate('MiniBreak',
-      { zooAnimalCount: this.state.zooAnimalCount,
-        zooActivityCounter: this.state.zooActivityCounter});
+    // two choices - MiniBreak or back to MyZoo
+    if(this.state.zooGoalCounter <= this.state.zooActivityCounter) {
+      this.props.completeSession({
+        //zooActivityCounter: this.state.zooActivityCounter + 1,
+        zooHasNewAnimal: true,
+        zooAnimalCount: this.state.zooAnimalCount + 1,
+      });
+      this.props.navigation.navigate('MyZoo');
+    } else {
+      this.props.updateSession({
+        zooActivityCounter: this.state.zooActivityCounter + 1,
+      });
+
+      this.props.navigation.navigate('MiniBreak',
+        { zooAnimalCount: this.state.zooAnimalCount,
+          zooActivityCounter: this.state.zooActivityCounter});
+    }
+
   }
-
-
-  // gotoNext = async() => {
-  //   console.log('Activity.js gotoNext started');
-  //
-  //   this.setState({zooActivityCounter: this.state.zooActivityCounter + 1});
-  //
-  //   // two choices - MiniBreak or back to MyZoo
-  //   if(this.state.zooGoalCounter === this.state.zooActivityCounter) {
-  //     await animalAddedToZoo();
-  //     this.props.navigation.navigate('MyZoo');
-  //   } else {
-  //     await updateZooActivityCounter();
-  //     this.props.navigation.navigate('MiniBreak',
-  //       { zooAnimalCount: this.state.zooAnimalCount,
-  //         zooActivityCounter: this.state.zooActivityCounter});
-  //   }
-  // }
-
 
   chooseVideo = () => {
 
@@ -195,7 +221,8 @@ class Activity extends Component {
   }
 
   render() {
-    //console.log(`Activity.js render state: ${JSON.stringify(this.state)}`);
+    //console.log(`Activity.js render this.props: ${JSON.stringify(this.props)}`);
+    //console.log(`Activity.js render this.state: ${JSON.stringify(this.state)}`);
 
     return (
       <View style={styles.containerActivity}>
@@ -215,20 +242,22 @@ class Activity extends Component {
              captureAudio={false}
           />
         </View>
-
-
     </View>
     );
   }
 }
 
-//export default withNavigationFocus(Activity);
+Activity.propTypes = {
+  updateSession: PropTypes.func.isRequired,
+  completeSession: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = state => ({
-  //family: state.family,
+  family: state.family,
   viewControl: state.viewControl,
   players: state.players,
   sessions: state.sessions,
 });
 
-export default connect(mapStateToProps, {})(withNavigationFocus(Activity));
+//export default withNavigationFocus(Activity);
+export default connect(mapStateToProps, { updateSession, completeSession })(withNavigationFocus(Activity));

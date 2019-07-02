@@ -24,4 +24,11 @@ export const UPDATE_PLAYER_SCORE = 'UPDATE_PLAYER_SCORE';
 export const NEW_SESSION = 'NEW_SESSION';
 //export const ADD_GAME_TO_SESSION = 'ADD_GAME_TO_SESSION';
 export const ADD_PLAYERS_TO_SESSION = 'ADD_PLAYERS_TO_SESSION';
-export const UPDATE_GAME_STATUS_IN_SESSION = 'UPDATE_GAME_STATUS_IN_SESSION';
+export const UPDATE_SESSION = 'UPDATE_SESSION';
+export const COMPLETE_SESSION = 'COMPLETE_SESSION';
+
+// viewControl actions
+// set game
+export const SET_GAME = 'SET_GAME';
+// set players[]
+export const SET_PLAYERS = 'SET_PLAYERS';
