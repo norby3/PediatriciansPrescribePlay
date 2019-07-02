@@ -18,7 +18,8 @@ export const NEW_CHILD = 'NEW_CHILD';
 
 // player Actions
 // replaced by shared actions NEW_ADULT & NEW_CHILD export const NEW_PLAYER = 'NEW_PLAYER';
-export const UPDATE_PLAYER_SCORE = 'UPDATE_PLAYER_SCORE';
+export const UPDATE_TOTAL_SCORE_ZOO = 'UPDATE_TOTAL_SCORE_ZOO';
+export const UPDATE_TOTAL_SCORE_PLAY = 'UPDATE_TOTAL_SCORE_PLAY';
 
 // session Actions
 export const NEW_SESSION = 'NEW_SESSION';

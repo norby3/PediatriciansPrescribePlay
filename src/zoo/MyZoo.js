@@ -49,19 +49,25 @@ class MyZoo extends Component {
     });
   }
 
-  reloadData = async() => {
+  // reloadData = async() => {
+  //   console.log(`MyZoo.reloadData started`);
+  //
+  //   let session = this.props.sessions[this.props.sessions.length-1];
+  //   console.log(`MyZoo reloadData session = ${JSON.stringify(session)}`);
+  //
+  //   await this.setState({
+  //     //zooAnimalCount: this.props.players[1].totalScoreZoo,
+  //     //zooAnimalCount: session.zooAnimalCount,
+  //     zooHasNewAnimal: session.zooHasNewAnimal,
+  //     childFirstName: session.players[0].name,
+  //   });
+  // }
+
+  reloadData = () => {
     console.log(`MyZoo.reloadData started`);
-
-    let session = this.props.sessions[this.props.sessions.length-1];
-    console.log(`MyZoo reloadData session = ${JSON.stringify(session)}`);
-
-    await this.setState({
-      //zooAnimalCount: this.props.players[1].totalScoreZoo,
-      //zooAnimalCount: session.zooAnimalCount,
-      zooHasNewAnimal: session.zooHasNewAnimal,
-      childFirstName: session.players[0].name,
-    });
+    this.setState({ totalScoreZoo: this.props.players[0].totalScoreZoo });
   }
+
 
   componentWillUnmount() {
     // Remove the event listener

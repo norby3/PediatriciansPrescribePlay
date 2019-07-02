@@ -1,7 +1,8 @@
 import {
   NEW_ADULT,
   NEW_CHILD,
-  //UPDATE_PLAYER_SCORE,
+  UPDATE_TOTAL_SCORE_ZOO,
+  UPDATE_TOTAL_SCORE_PLAY
 } from '../actions/types';
 
 const playersState = [];
@@ -27,6 +28,40 @@ export default function(state = playersState, action) {
         totalScorePlay: 0
       };
       return state.concat(newPlayerChild);
+
+    case UPDATE_TOTAL_SCORE_ZOO:
+      console.log(`playerReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
+      return state.map((item, index) => {
+        // Find the item with the matching name
+        if(item.name === action.payload.name) {
+          // Return a new object
+          return {
+            ...item,  // copy the existing item
+            totalScoreZoo: item.totalScoreZoo + action.payload.totalScoreZoo
+          }
+        }
+
+        // Leave every other item unchanged
+        return item;
+      });
+
+    case UPDATE_TOTAL_SCORE_PLAY:
+      console.log(`playerReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
+      return state.map((item, index) => {
+        // Find the item with the matching name
+        if(item.name === action.payload.name) {
+          // Return a new object
+          return {
+            ...item,  // copy the existing item
+            totalScorePlay: item.totalScorePlay + action.payload.totalScorePlay
+          }
+        }
+
+        // Leave every other item unchanged
+        return item;
+      });
+
+
     default:
       return state;
   }

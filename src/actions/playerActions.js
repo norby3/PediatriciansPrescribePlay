@@ -1,18 +1,30 @@
 import {
-  UPDATE_PLAYER_SCORE,
+  UPDATE_TOTAL_SCORE_ZOO,
+  UPDATE_TOTAL_SCORE_PLAY,
 } from './types';
 
 
 // inputData = uuid, totalScoreZoo: newScore, or totalScorePlay: newScore
-export const updatePlayerScore = (inputData) => dispatch => {
-  console.log('playerActions.updatePlayerScore');
+export const updateTotalScoreZoo = (inputData) => dispatch => {
+  console.log('playerActions.updateTotalScoreZoo');
   dispatch({
-    type: UPDATE_PLAYER_SCORE,
-    payload: inputData
-    // payload: {
-    //   uuid: inputData.uuid,
-    //   game: inputData.game,
-    //   newScore: inputData.newScore
-    // },
+    type: UPDATE_TOTAL_SCORE_ZOO,
+    //payload: inputData
+    payload: {
+      name: inputData.name,
+      totalScoreZoo: inputData.totalScoreZoo
+    },
+  });
+}
+
+export const updateTotalScorePlay = (inputData) => dispatch => {
+  console.log('playerActions.updateTotalScorePlay');
+  dispatch({
+    type: UPDATE_TOTAL_SCORE_PLAY,
+    //payload: inputData
+    payload: {
+      name: inputData.name,
+      totalScorePlay: inputData.totalScorePlay
+    },
   });
 }

@@ -16,6 +16,7 @@ import { withNavigationFocus } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { updateSession, completeSession } from '../actions/sessionActions';
+import { updateTotalScoreZoo } from '../actions/playerActions';
 
 import { RNCamera } from 'react-native-camera';
 import Video from 'react-native-video';
@@ -33,7 +34,8 @@ class Activity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      zooGoalCounter: 6,
+      //zooGoalCounter: 6,
+      zooGoalCounter: 2,     // 2 during testing - speed things up
       zooActivityCounter: 1,
     }
   }
@@ -80,6 +82,13 @@ class Activity extends Component {
 
   }
 
+  // responsibilities:
+  // control coreloop - shows 6 videos and 5 mini breaks
+  // when done with coreloop after 6th video:
+  //   complete the session
+  //   update player scores +1
+  //   xfer back to MyZoo
+
   gotoNext = () => {
     console.log('Activity.js gotoNext started');
 
@@ -90,6 +99,13 @@ class Activity extends Component {
         zooHasNewAnimal: true,
         zooAnimalCount: this.state.zooAnimalCount + 1,
       });
+
+      // loop thru session's players - update their score
+      let session = this.props.sessions[this.props.sessions.length-1];
+      session.players.map((playerName) => {
+        this.props.updateTotalScoreZoo({name: playerName, totalScoreZoo: 1});
+      });
+
       this.props.navigation.navigate('MyZoo');
     } else {
       this.props.updateSession({
@@ -250,6 +266,7 @@ class Activity extends Component {
 Activity.propTypes = {
   updateSession: PropTypes.func.isRequired,
   completeSession: PropTypes.func.isRequired,
+  updateTotalScoreZoo: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -260,4 +277,4 @@ const mapStateToProps = state => ({
 });
 
 //export default withNavigationFocus(Activity);
-export default connect(mapStateToProps, { updateSession, completeSession })(withNavigationFocus(Activity));
+export default connect(mapStateToProps, { updateSession, completeSession, updateTotalScoreZoo })(withNavigationFocus(Activity));
