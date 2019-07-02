@@ -24,7 +24,7 @@ class MyZoo extends Component {
     super(props);
     this.state = {
       totalScoreZoo: 1,
-      childFirstName: this.props.family.childFirstName,
+      //childFirstName: this.props.family.childFirstName,
     }
   }
 
@@ -98,17 +98,20 @@ class MyZoo extends Component {
   }
 
   render() {
-    console.log(`MyZoo.render state: ${JSON.stringify(this.state)}`);
+    //console.log(`MyZoo.render state: ${JSON.stringify(this.state)}`);
+    //console.log(`MyZoo.render props: ${JSON.stringify(this.props)}`);
+    //console.log(`MyZoo.render childFirstName: ${JSON.stringify(this.props.family.childFirstName)}`);
 
     return (
       <ScrollView style={{flex:1}}>
 
         <View style={styles.myZooView}>
           <Text style={styles.coreLoopText1}>
-            {this.state.childFirstName? `${this.state.childFirstName}'s` : 'My'} Zoo</Text>
-
+            { (this.props.family.childFirstName.toLowerCase().slice(-1) === 's') ?
+               this.props.family.childFirstName + "'" :
+               this.props.family.childFirstName + "'s"
+            } Zoo</Text>
           <Text>&nbsp;</Text>
-
 
           <View style={styles.listZooAnimalsView}>
 
