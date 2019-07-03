@@ -34,22 +34,12 @@ class Activity extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //zooGoalCounter: 6,
-      zooGoalCounter: 2,     // 2 during testing - speed things up
+      zooGoalCounter: 6,
+      //zooGoalCounter: 2,     // 2 during testing - speed things up
       zooActivityCounter: 1,
     }
   }
 
-  // componentWillMount() {
-  //   let session = this.props.sessions[this.props.sessions.length-1];
-  //   console.log(`Activity.js componentWillMount session = ${JSON.stringify(session)}`);
-  //
-  //   this.setState({
-  //     zooActivityCounter: session.zooActivityCounter,
-  //     zooAnimalCount: session.zooAnimalCount,
-  //   });
-  //
-  // }
   componentWillMount() {
     const { navigation } = this.props;
     this.focusListener = navigation.addListener("didFocus", () => {

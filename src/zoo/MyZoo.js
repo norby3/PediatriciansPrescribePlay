@@ -87,7 +87,7 @@ class MyZoo extends Component {
       zooGoalCounter: 6,
       zooActivityCounter: 1,
       zooHasNewAnimal: false,
-      zooAnimalCount: 1,                    // fix this
+      zooAnimalCount: this.props.players[0].totalScoreZoo, 
     });
 
     this.props.navigation.navigate('Activity');
