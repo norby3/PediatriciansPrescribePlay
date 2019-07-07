@@ -24,8 +24,9 @@ import uuidv4 from 'uuid/v4';
 
 class AdultInfo extends Component {
   static navigationOptions = {
-         title: 'Parent/Adult Information',
+    title: 'Parent/Adult Information',
     headerLeft: null,
+    gesturesEnabled: false,
   };
 
   constructor(props) {

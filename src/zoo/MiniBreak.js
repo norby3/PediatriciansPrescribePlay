@@ -8,6 +8,10 @@ import {
   View
  }                          from 'react-native';
 //import Image from 'react-native-scalable-image';
+import {
+  Icon,
+} from 'react-native-elements';
+
 import { animalGifs }     from './AnimalGifs.js';
 
 //const { width, height } = Dimensions.get('window');
@@ -67,9 +71,9 @@ export default class MiniBreak extends Component {
       <View style={styles.container}>
 
         <View style={styles.breakTimerView}>
-          <Text style={styles.welcome}>Mini Break</Text>
+          <Text style={styles.coreLoopText1}>Mini Break</Text>
           <Text style={styles.bigText}>{this.state.countdownTimer}</Text>
-
+          <Text style={styles.coreLoopText1}>Guess new animal &darr;</Text>
         </View>
 
         <View style={styles.gifRevealView}>

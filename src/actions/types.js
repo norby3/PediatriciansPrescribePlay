@@ -20,6 +20,7 @@ export const NEW_CHILD = 'NEW_CHILD';
 // replaced by shared actions NEW_ADULT & NEW_CHILD export const NEW_PLAYER = 'NEW_PLAYER';
 export const UPDATE_TOTAL_SCORE_ZOO = 'UPDATE_TOTAL_SCORE_ZOO';
 export const UPDATE_TOTAL_SCORE_PLAY = 'UPDATE_TOTAL_SCORE_PLAY';
+export const ADD_PLAYER = 'ADD_PLAYER';
 
 // session Actions
 export const NEW_SESSION = 'NEW_SESSION';
@@ -33,3 +34,5 @@ export const COMPLETE_SESSION = 'COMPLETE_SESSION';
 export const SET_GAME = 'SET_GAME';
 // set players[]
 export const SET_PLAYERS = 'SET_PLAYERS';
+export const INCREMENT_ACTIVITY_VIDEO_INDEX = 'INCREMENT_ACTIVITY_VIDEO_INDEX';
+export const INCREMENT_GIF_CELEBRATION_INDEX = 'INCREMENT_GIF_CELEBRATION_INDEX';

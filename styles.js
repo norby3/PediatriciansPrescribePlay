@@ -102,7 +102,10 @@ export default StyleSheet.create({
     color: 'orange',
     fontWeight: 'bold',
   },
-
+  guessText: {
+    marginTop: 30,
+    fontSize: 24,
+  },
 
   // begin styles from 'geisinger' app
   outerView: {
@@ -179,7 +182,10 @@ export default StyleSheet.create({
     width: '100%',
     margin: 20,
   },
+  twoPanel: {
+    width: '40%',
 
+  },
   buttonsView2: {
     flex: 1,
     width: '98%',
@@ -433,9 +439,8 @@ export default StyleSheet.create({
     textAlign: 'center',
     marginVertical: 10,
   },
-
   wideButton: {
-    marginVertical: 20,
+    marginVertical: 5,
     width: width,
     height: height * 0.25,
 
@@ -443,6 +448,9 @@ export default StyleSheet.create({
     //flex: 1,
     justifyContent: 'center',
     //alignItems: 'center',
+  },
+  orange: {
+    backgroundColor: 'darkorange',
   },
   termsOfServiceText: {
     fontSize: 10,
@@ -452,6 +460,6 @@ export default StyleSheet.create({
   },
   termsOfServiceLinkText: {
     textDecorationLine: 'underline',
-  }
+  },
 
 });

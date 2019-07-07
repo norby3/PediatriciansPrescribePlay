@@ -7,11 +7,6 @@ import {
   Text,
   View
  }                          from 'react-native';
- // import {
- //   getUserData,
- //   updateZooActivityCounter,
- //   animalAddedToZoo,
- // }                         from '../shared/UserDataFunctions.js';
 import { withNavigationFocus } from 'react-navigation';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -80,14 +75,21 @@ class Activity extends Component {
   //   xfer back to MyZoo
 
   gotoNext = () => {
-    console.log('Activity.js gotoNext started');
+    //console.log('Activity.js gotoNext started');
 
     // two choices - MiniBreak or back to MyZoo
     if(this.state.zooGoalCounter <= this.state.zooActivityCounter) {
+      let nowMillis = Date.now();
+      let now = new Date(nowMillis);
+
       this.props.completeSession({
         //zooActivityCounter: this.state.zooActivityCounter + 1,
         zooHasNewAnimal: true,
         zooAnimalCount: this.state.zooAnimalCount + 1,
+        finishedAtLocalTimezone: now.toString(),
+        finishedAtUTC: now.toUTCString(),
+        finishedAtMillis: nowMillis,
+
       });
 
       // loop thru session's players - update their score
@@ -236,6 +238,10 @@ class Activity extends Component {
 
           {this.props.isFocused ? this.chooseVideo() : null}
 
+        </View>
+
+        <View>
+          <Text style={styles.coreLoopText1}>Do this &uarr;</Text>
         </View>
 
         <View style={styles.cameraView}>

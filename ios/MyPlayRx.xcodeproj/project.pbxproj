@@ -1527,7 +1527,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clinicnerds.PrePlayRx;
 				PRODUCT_NAME = MyPlayRx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1553,7 +1553,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clinicnerds.PrePlayRx;
 				PRODUCT_NAME = MyPlayRx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

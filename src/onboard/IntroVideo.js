@@ -7,7 +7,8 @@ import IntroVid from '../../assets/videos/intro.mp4';
 
 export default class IntroVideo extends Component {
   static navigationOptions = {
-      header: null
+    header: null,
+    gesturesEnabled: false,
   }
 
   gotoNext = () => {

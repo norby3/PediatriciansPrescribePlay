@@ -68,7 +68,6 @@ class MyZoo extends Component {
     this.setState({ totalScoreZoo: this.props.players[0].totalScoreZoo });
   }
 
-
   componentWillUnmount() {
     // Remove the event listener
     this.focusListener.remove();
@@ -87,7 +86,7 @@ class MyZoo extends Component {
       zooGoalCounter: 6,
       zooActivityCounter: 1,
       zooHasNewAnimal: false,
-      zooAnimalCount: this.props.players[0].totalScoreZoo, 
+      zooAnimalCount: this.props.players[0].totalScoreZoo,
     });
 
     this.props.navigation.navigate('Activity');
@@ -101,6 +100,10 @@ class MyZoo extends Component {
       gifs.push(animalGifs[i]);
     }
     return gifs;
+  }
+
+  _gotoHome = (event) => {
+    this.props.navigation.navigate('HomeStack');
   }
 
   render() {
@@ -130,6 +133,7 @@ class MyZoo extends Component {
           <Text style={styles.coreLoopText1}>
             Zoo Animals = {this.state.totalScoreZoo}
           </Text>
+
           <TouchableOpacity
             style={styles.bigBut2}
             onPress={this.onPress}
@@ -137,7 +141,17 @@ class MyZoo extends Component {
             <Text style={styles.bigButTxt}>Add Animal</Text>
           </TouchableOpacity>
           <Text>&nbsp;</Text>
+
+          <TouchableOpacity
+            style={styles.bigBut2}
+            onPress={(event) => this._gotoHome(event, "Home")}
+          >
+            <Text style={styles.bigButTxt}>Home</Text>
+          </TouchableOpacity>
+
           <Text>&nbsp;</Text>
+          <Text>&nbsp;</Text>
+
 
         </View>
 

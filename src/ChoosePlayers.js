@@ -13,6 +13,8 @@ import {
   Button,
   Divider,
 } from 'react-native-elements';
+import { withNavigationFocus } from 'react-navigation';
+
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setPlayers } from './actions/viewControlActions';
@@ -28,9 +30,28 @@ class ChoosePlayers extends React.Component {
 
     this.state = {
       players: [],
-      game: this.props.viewControl.game,
     }
   };
+
+  componentWillMount() {
+    const { navigation } = this.props;
+    this.focusListener = navigation.addListener("didFocus", () => {
+      // The screen is focused
+      console.log('ChoosePlayers didFocus listener started');
+      // Call any action
+      this.reloadData();
+    });
+  }
+
+  reloadData = async() => {
+    console.log(`ChoosePlayers.reloadData started`);
+    await this.setState({players: this.props.players});
+  }
+
+  componentWillUnmount() {
+    // Remove the event listener
+    this.focusListener.remove();
+  }
 
   playerSelected() {
     //console.log(`this.state.phone.length == 10 ${this.state.phone.length == 10}`);
@@ -86,7 +107,6 @@ class ChoosePlayers extends React.Component {
             >
               <Text style={styles.bigButTxt}>{player.name}</Text>
             </TouchableOpacity>
-            <Text style={styles.playerScoreName}>{player.totalScoreZoo}</Text>
           </View>
         );
       });
@@ -123,11 +143,17 @@ class ChoosePlayers extends React.Component {
     // update the players in app's state viewControl
     this.props.setPlayers({players: this.state.players});
 
-    if (this.state.game === 'MyZoo') {
+    if(this.props.viewControl.game === 'MyZoo') {
       this.props.navigation.navigate('MyZooStack');
     } else {
       this.props.navigation.navigate('MyPlayStack');
     }
+  };
+
+  addPlayer = () => {
+    //console.log('addPlayer');
+    this.props.navigation.navigate('AddPlayer');
+
   };
 
   render() {
@@ -137,16 +163,23 @@ class ChoosePlayers extends React.Component {
     return (
       <View style={styles.outerView3}>
 
-          {this.state.game === 'MyZoo'?
+          {this.props.viewControl.game === 'MyZoo'?
             this.getPlayerButtonsMyZoo() : this.getPlayerButtonsMyPlay()
           }
 
           <TouchableOpacity
             style={this.playerSelected()? styles.bigBut2 : [styles.bigBut2, styles.bigBut2disabled] }
             disabled={!this.playerSelected()}
-            onPress={(event) => this.gotoNext(event, "Start")}
+            onPress={(event) => this.gotoNext(event, "GO")}
           >
-            <Text style={styles.bigButTxt}>Start</Text>
+            <Text style={styles.bigButTxt}>GO</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.bigBut2}
+            onPress={(event) => this.addPlayer(event, "AddPlayer")}
+          >
+            <Text style={styles.bigButTxt}>Add Player</Text>
           </TouchableOpacity>
 
 
@@ -166,4 +199,4 @@ const mapStateToProps = state => ({
   family: state.family
 });
 
-export default connect(mapStateToProps, {setPlayers})(ChoosePlayers);
+export default connect(mapStateToProps, {setPlayers})(withNavigationFocus(ChoosePlayers));

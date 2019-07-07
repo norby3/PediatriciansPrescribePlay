@@ -41,8 +41,9 @@ const DismissKeyboard = ({ children }) => (
 
 class ChildInfo extends Component {
   static navigationOptions = {
-         title: 'Child Information',
+    title: 'Child Information',
     headerLeft: null,
+    gesturesEnabled: false,
   };
 
   constructor(props) {
@@ -287,7 +288,6 @@ class ChildInfo extends Component {
 
           <TouchableOpacity
             style={this.validateForm()? styles.bigBut2 : styles.bigBut2disabled }
-            onPress={this._gotoNextScreen}
             disabled={!this.validateForm()}
             onPress={(event) => this.handleSubmit(event, "Next")}
             ref={(input) => { this.nextButton = input }}

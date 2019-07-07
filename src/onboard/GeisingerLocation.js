@@ -25,8 +25,9 @@ import { TOS } from './TermsOfService.js';
 class GeisingerLocation extends Component {
 
   static navigationOptions = {
-         title: 'Choose Your Geisinger Location',
+    title: 'Choose Your Geisinger Location',
     headerLeft: null,
+    gesturesEnabled: false,
   };
 
   constructor(props) {

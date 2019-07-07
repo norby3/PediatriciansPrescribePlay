@@ -21,8 +21,9 @@ import { setCellphoneAndPassword } from '../actions/familyActions';
 
 class AdultSignup extends Component {
   static navigationOptions = {
-         title: 'Parent/Adult Sign Up',
+    title: 'Parent/Adult Sign Up',
     headerLeft: null,
+    gesturesEnabled: false,
   };
 
   constructor(props) {
