@@ -9,6 +9,7 @@ import AdultInfo from './src/onboard/AdultInfo';
 import ChildInfo from './src/onboard/ChildInfo';
 import IntroVideo from './src/onboard/IntroVideo';
 import Home from './src/Home';
+import DanceBonus from './src/DanceBonus';
 import ChoosePlayers from './src/ChoosePlayers';
 import AddPlayer from './src/AddPlayer';
 
@@ -31,6 +32,7 @@ const OnboardingStack = createStackNavigator({
 
 const HomeStack = createStackNavigator({
   Home: { screen: Home },
+  DanceBonus: { screen: DanceBonus },
   ChoosePlayers: { screen: ChoosePlayers },
   AddPlayer: { screen: AddPlayer },
   }, { initialRouteName: 'Home' }

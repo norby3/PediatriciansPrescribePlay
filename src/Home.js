@@ -56,8 +56,8 @@ class Home extends Component {
     }
   }
   gotoDanceBonus = () => {
-    console.log('xfer to DanceBonus view');
-
+    //console.log('xfer to DanceBonus view');
+    this.props.navigation.navigate('DanceBonus');
   }
 
   render() {
@@ -109,7 +109,7 @@ class Home extends Component {
               </View>
               <View style={styles.twoPanel}>
                 <Text style={styles.bigButTxt}>MyPlay</Text>
-                <Text style={styles.bigButTxt}>age 8+</Text>
+                <Text style={styles.bigButTxt}>age 9+</Text>
               </View>
             </View>
 
@@ -117,7 +117,7 @@ class Home extends Component {
 
           { this.state.showDanceBonusButton ?
             <TouchableOpacity
-              style={[styles.wideButton, styles.orange]}
+              style={[styles.wideButton, styles.steelblue]}
               onPress={(event) => this.gotoDanceBonus(event, "DanceBonus")}
               ref={(input) => { this.nextButton = input }}
             >
@@ -131,13 +131,15 @@ class Home extends Component {
                 />
                 </View>
                 <View style={styles.twoPanel}>
-                  <Text style={styles.bigButTxt}>Dance Bonus</Text>
+                  <Text style={styles.bigButTxt}>Dance</Text>
+                  <Text style={styles.bigButTxt}>Party</Text>
+                  <Text style={styles.bigButTxt}>Bonus</Text>
                 </View>
               </View>
 
             </TouchableOpacity>
           : <Text style={styles.devOnlyText2}>
-            (Complete a game session to earn a Dance Bonus)</Text> }
+            (Complete a game session to earn a Dance Party Bonus)</Text> }
 
         </View>
       </ScrollView>

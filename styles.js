@@ -452,6 +452,20 @@ export default StyleSheet.create({
   orange: {
     backgroundColor: 'darkorange',
   },
+  steelblue: {
+    backgroundColor: 'steelblue'
+  },
+  wideButton3: {
+    marginVertical: 5,
+    width: width,
+    height: height * 0.15,
+    backgroundColor: 'steelblue',
+    //flex: 1,
+    justifyContent: 'center',
+    //alignItems: 'center',
+  },
+
+
   termsOfServiceText: {
     fontSize: 10,
     //backgroundColor: 'pink',

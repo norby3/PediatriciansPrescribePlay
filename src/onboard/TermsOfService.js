@@ -1,89 +1,152 @@
-
 export const TOS =
-`Geisinger Health Sytem Terms of Service
+`
+PEDIATRICIANS PRESCRIBE PLAY MOBILE APP END USER LICENSE AGREEMENT
+IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT (this “EULA”) AND AS WELL AS THE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP PRIVACY POLICY CAREFULLY. THIS EULA IS BETWEEN YOU (“You” or “Your”) AND GEISINGER CLINIC (“We” or “Us” or “Our”). BY TAPPING ON THE “I ACCEPT” BUTTON WITHIN THIS APPLICATION, YOU ACKNOWLEDGE THAT YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO ALL OF THE TERMS AND CONDITIONS SET FORTH BELOW, YOU ARE NOT PERMITTED TO USE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP (the “Application”).
 
-Our app and its related online services are made available to the public as  online information and communication services of Geisinger Clinic and its affiliated hospitals, clinics, and health plans (collectively referred to herein as "Geisinger," "us," and "we"). Our app Terms of Use help you understand what you can do on our site and what your responsibilities are. By continuing to use our app, you signify your agreement to these Terms of Use. If you do not agree with these Terms of Use, please do not use our app.
+License and Restrictions
+We grant You a limited, non-exclusive, non-sublicensable, non-transferable license to use the Application, solely for Your personal, non-commercial use in accordance with the instructions and documentation set forth in this EULA or any parts of the Application (collectively, the “Documentation”). Unless expressly otherwise set forth in this EULA, You may not: (a) modify, translate or create derivative works of the Application or the Documentation; (b) decompile, reverse engineer or reverse assemble any portion of the Application or attempt to discover any source code or underlying ideas or algorithms of the Application; (c) sell, assign, sublicense, rent, lease, loan, provide, distribute or otherwise transfer all or any portion of the Application or the Documentation; (d) make, have made, reproduce or copy the Application or the Documentation; (e) remove or alter any trademark, logo, copyright or other proprietary notices associated with the Application or the Documentation, or make available the Application without reproducing all proprietary notices; (f) cause or permit any other party to do any of the foregoing; or (g) engage in any conduct that, directly or indirectly, violates the terms of this EULA or has a harmful impact on the Application.
 
-The Basics
-All information on this site is copyrighted by Geisinger.
-Please don’t reuse information—including images—from this site without our written permission.
-We can’t provide medical advice on this site or through email. If you’re having a medical emergency, call 911.
-To use online payment, you’ll need to agree to allow us to display your information on our secure site.
-You’re responsible for activities that occur on your account.
-We’re not responsible for content on other sites that we link to.
-You can link to our site, but please refer to #2 above.
-For more specifics about these Terms of Use, please read the legal details below.
+Use of the Application
+We reserve the right to terminate Your use of the Application at any time, with or without any reason. The Application is provided solely for informational purposes and reliance on the Application is purely at Your own risk. We do not warrant the accuracy or completeness of the content contained in the Application. You will be solely responsible for Your use of and reliance on the content contained in the Application and for all decisions or actions resulting from Your use of the Application. The Application is not a substitute for the medical judgment of a physician or other licensed health care professional. The Application is not intended to replace or overrule the judgment or diagnosis of a physician or licensed health care professional and must not be used as the basis for making any diagnosis or treatment recommendation.
 
-1. Privacy
-Your privacy is of the utmost importance to us. Please review Geisinger’s Notice of Privacy Practices located on our app, and its Privacy Policy for a thorough description of how we gather, use and protect your personal information. Nothing in these Terms of Use or the Privacy Policy shall be contrary to our Notice of Privacy Practices, as required by Federal Regulation.
+Use of Public Discussion and Messaging Services
+The Application may allow You to use certain public discussion services (e.g., public discussion board) whereby You can post comments that other users of the Application will be able to see. In addition, the Application may allow You to privately message others users of the Application. If You choose to use any of those services (collectively, the “Services”), You will do so at your own risk, and You will do so subject to the following conditions:
+• You will not use the Services for any illegal or unauthorized purpose or beyond the scope of the Services expected use
+• You will be solely responsible for any message data sent from Your account
+• You will not use the Services to create or transmit unwanted email, junk email, bulk email, promotions, spam or content that includes any advertising
+• You will not intentionally transmit any viruses, bugs, worms, or any other computer code of a destructive nature or that may harm a network, computer, server, hardware, software or telephone equipment using the Services
+• You will not violate anyone else’s legal rights (e.g., privacy rights) or any laws (e.g., copyright laws) in Your jurisdiction while using the Services
+• You will use the Services in accordance with all applicable laws
+• You will not use any data mining, robots, or similar data gathering and extraction methods in connection with the Services
+• You will not use the Services or export the Services in violation of U.S. export laws and regulations
+We assume no liability of any kind for any message, data, or item that may be posted by a third party in the Application or which is otherwise sent to You via the Services by a third party. Moreover, We will not be responsible for maintaining backups of any message, data, or item that may be posted or sent via the Services.
 
-2. Restrictions on Use and Ownership
-All pages within this app and any material made available for download (collectively referred to as "the Site") are the property of Geisinger and/or its subsidiaries and affiliates.
-Geisinger hereby grants site visitors, including patients and members, a nonexclusive license to use the Site solely for personal, informational, and non-commercial use.
-Use of certain features of the Site, including obtaining access to your protected health information, require registration and creation of a user name and password.
-As a condition of your use of this Site, you warrant to Geisinger that you will not use the Site for any purpose that is unlawful or not permitted by these Terms of Use.  We expressly restrict the use of the Site for purposes including (but not limited to):
-Competitive Advantage:  You may not use the Site to obtain materials, data, or information for purposes of gaining a competitive advantage.
-Commercial Benefit / Financial Gain (Payment):  You may not use the Site for commercial purposes, or provide you login credentials in exchange for payment.
-Non-Personal Use:  The Site is intended for personal use only.  Do not provide your login credentials, including user name and/or password to third parties.
-With the exception of your protected health information, all contents of the Site, including the text, images, audio, and video, are copyrighted and may not be distributed, modified, reproduced, or used, in whole or in part, without the prior written consent of Geisinger, except that you may download content from the Site to any single computer for your personal, informational and non-commercial use only, provided you keep intact all copyright, trademark, and other proprietary notices and comply with any applicable end user license agreements. For purposes of these Terms of Use, any use of these materials on any other app or networked computer environment for any purpose is prohibited.
-If you breach any of these Terms of Use, your authorization to use this Site automatically terminates and you must immediately destroy all downloaded or printed materials obtained from the site with the exception of your own protected health information that you have obtained from the Site.
-Any rights not expressly granted by these Terms of Use or any applicable end user license agreements are expressly reserved by Geisinger.
+Ownership
+The Application and the Documentation, including all images, photographs, animations, text and other audiovisual materials, and any and all patents, copyrights, moral rights, trademarks, trade secrets and any other form of intellectual property rights recognized in any jurisdiction, including applications and registrations for any of the foregoing embodied therein are owned by Us or Our licensors. The Application and the Documentation are licensed, and not sold, to You for use only under the terms of this EULA. We reserve all rights not expressly granted to You. You will not use publicly for publicity, promotion, or otherwise, any logo, name, trade name, service mark, or trademark belonging to Us or Our affiliates or licensors, including, but not limited to the word “Geisinger,” or any simulation, abbreviation, or adaptation of the same, or the name of any of Our employees or agents, without Our prior, written, express consent.
 
-3. Trademark Notice
-This Site displays multiple trademarks and service marks which are owned by Geisinger. You agree not to display, reproduce, duplicate, copy, sell, resell, exploit or use in any manner any trademark, service mark or logo displayed on this Site without the express written permission of Geisinger or the third party that may own the trademark, service mark or logo. Use or misuse of these trademarks is expressly prohibited and may violate state and/or federal trademark law.
+Term and Termination
+The effective date of this EULA is the date on which You install the Application. This EULA is effective until terminated. You may terminate this EULA at any time by deleting the Application from Your device. This EULA will terminate immediately without notice from Us if You fail to comply with any provision of this EULA. Upon termination, You must delete the Application from Your desktop, laptop, tablet, phone and/or other device on which the Application is installed.
 
-4. Claims of Copyright Infringement
-In accordance with the Digital Millennium Copyright Act (17 U.S.C. § 512), Geisinger is registered with the United States Copyright Office as a Service Provider. Any notifications of claimed copyright infringement must be sent to Geisinger’s Legal Department, 100 N Academy Avenue, Danville, PA 17822-4031.
-Other than where specifically noted, Geisinger does not want to receive confidential or proprietary information from you through the Site. Please note that any information or material sent to Geisinger through the Site, including email and all data, images, sounds, text, and other things embodied therein, (collectively "Communications") will be deemed NOT to be confidential except as provided otherwise by our Privacy Policy. By sending Geisinger any Communications, you grant Geisinger an unrestricted, irrevocable, world-wide, royalty free license to use, reproduce, display, perform, modify, transmit, and distribute those Communications in and on all media now known or later developed, and you also agree that Geisinger is free to use any ideas, concepts, know-how, or techniques that you send us for any purpose. You hereby waive your rights in any such materials or information, and you hereby warrant that any such materials and information are original with you, or that you have the right to submit such materials or information. You agree that you shall have no recourse against Geisinger for any alleged or actual infringement or misappropriation of any proprietary right in your Communications to us.
+DISCLAIMER OF WARRANTIES
+THE APPLICATION IS PROVIDED TO YOU ON AN “AS IS” OR “AS AVAILABLE” BASIS WITHOUT ANY REPRESENTATIONS, WARRANTIES, COVENANTS OR CONDITIONS OF ANY KIND. WE AND OUR SUPPLIERS DO NOT WARRANT THAT ANY OF THE APPLICATION WILL BE FREE FROM ALL BUGS, ERRORS, OR OMISSIONS. WE AND OUR SUPPLIERS DISCLAIM ANY AND ALL OTHER WARRANTIES AND REPRESENTATIONS (EXPRESS OR IMPLIED, ORAL OR WRITTEN) WITH RESPECT TO THE APPLICATION WHETHER ALLEGED TO ARISE BY OPERATION OF LAW, BY REASON OF CUSTOM OR USAGE IN THE TRADE, BY COURSE OF DEALING OR OTHERWISE, INCLUDING ANY AND ALL (A) WARRANTIES OF MERCHANTABILITY, (B) WARRANTIES OF FITNESS OR SUITABILITY FOR ANY PURPOSE (WHETHER OR NOT WE KNOW, HAVE REASON TO KNOW, HAVE BEEN ADVISED, OR ARE OTHERWISE AWARE OF ANY SUCH PURPOSE), (C) WARRANTIES OF NONINFRINGEMENT OR CONDITION OF TITLE, OR (D) WARRANTIES THAT THE APPLICATION WILL OPERATE WITHOUT INTERRUPTION OR ERROR. YOU ACKNOWLEDGE AND AGREE THAT YOU HAVE RELIED ON NO WARRANTIES WHEN MAKING YOUR DECISION TO USE THE APPLICATION. THIS DISCLAIMER AND EXCLUSION WILL APPLY EVEN IF THE EXPRESS WARRANTY DISCLAIMER SET FORTH ABOVE FAILS OF ITS ESSENTIAL PURPOSE.
 
-5. No Medical Advice
-Nothing on this Site may be considered medical advice, diagnosis or treatment. All health and health-related information contained within this Site is intended to be general in nature and should not be used as a substitute for a visit to a healthcare professional. The information you obtain from this Site might be inappropriate for your own situation, or might be misinterpreted. Geisinger assumes no responsibility for how you use the information you obtain from this Site.
-If you have an emergency, or think you need to speak to someone urgently, please do not rely on the email communication options provided to you through this Site. Neither email nor any other application available through this Site is a substitute for appropriate and timely contact with your physician. The Site is not a substitute for consultation with your physician. You should never change or stop any course of treatment prescribed by your physician without first consulting him or her. Only your physician can properly diagnose and treat your illness.
-Also, please note that although we strive to keep our information up to date, information changes rapidly, and some information may be out of date.
+LIMITATION OF LIABILITY
+IN NO EVENT WILL WE BE LIABLE TO YOU OR ANY OTHER PARTY FOR ANY LOSS OF PROFITS, LOSS OF USE, LOSS OF REVENUE, LOSS OF GOODWILL, ANY BODILY OR MENTAL INJURY, MALPRACTICE, INTERRUPTION OF BUSINESS, OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING, BUT NOT LIMITED TO, PHYSICAL LOSSES, MENTAL LOSSES OR ANY FINANCIAL LOSSES) ARISING OUT OF OR IN CONNECTION WITH THE APPLICATION, OR YOUR USE OF THE APPLICATION, REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, TORT, STRICT LIABILITY OR OTHERWISE, EVEN IF WE HAVE BEEN ADVISED OR ARE OTHERWISE AWARE OF THE POSSIBILITY OF SUCH DAMAGES. OUR TOTAL CUMULATIVE LIABILITY (INCLUDING, BUT NOT LIMITED TO, ANY LIABILITY WITH RESPECT TO ANY LOSS OF PROFITS, LOSS OF USE, LOSS OF REVENUE, LOSS OF GOODWILL, ANY BODILY OR MENTAL INJURY, MALPRACTICE, INTERRUPTION OF BUSINESS, OR FOR ANY INDIRECT, SPECIAL, INCIDENTAL, EXEMPLARY, PUNITIVE OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING, BUT NOT LIMITED TO, PHYSICAL LOSSES, MENTAL LOSSES OR ANY FINANCIAL LOSSES) ARISING OUT OF OR IN CONNECTION WITH THE APPLICATION OR YOUR USE OF THE APPLICATION, TO YOU OR ANY THIRD PARTY, WHETHER IN CONTRACT, TORT, STRICT LIABILITY OR OTHERWISE, WILL NOT EXCEED THE AMOUNT PAID BY YOU TO US. MULTIPLE CLAIMS WILL NOT EXPAND THIS LIMITATION. CERTAIN LAWS DO NOT ALLOW LIMITATIONS ON IMPLIED WARRANTIES OR THE EXCLUSION OR LIMITATION OF CERTAIN DAMAGES. IF THESE LAWS APPLY TO YOU, SOME OR ALL OF THE ABOVE DISCLAIMERS, EXCLUSIONS, OR LIMITATIONS MAY NOT APPLY TO YOU, AND YOU MIGHT HAVE ADDITIONAL RIGHTS.
 
-6. Online Payment
-In order to use the online payment service, you are required to complete the enrollment process by providing Geisinger with complete and accurate information as prompted by the applicable enrollment form provided on the enrollment screen. By completing the enrollment form, and clicking the "I Agree" button, you authorize Geisinger to display your statement and payment information on a secured Internet site. You are responsible for keeping your correct and current email address information in your customer profile. You are entirely responsible for maintaining the confidentiality of your password, banking information, credit card information and account information.
-FURTHERMORE, YOU ARE ENTIRELY RESPONSIBLE FOR ANY AND ALL ACTIVITIES THAT OCCUR UNDER YOUR ACCOUNT. YOU AGREE TO NOTIFY GEISINGER IMMEDIATELY UPON YOUR DISCOVERY OF UNAUTHORIZED USE OF YOUR ACCOUNT AND ANY OTHER BREACH OF SECURITY. GEISINGER WILL NOT BE RESPONSIBLE FOR ANY LOSS YOU MAY INCUR AS A RESULT OF SOMEONE ELSE MISUSING YOUR PASSWORD, BANKING INFORMATION, CREDIT CARD INFORMATION AND ACCOUNT EITHER WITH OR WITHOUT YOUR PERMISSION.HOWEVER, YOU COULD BE HELD LIABLE FOR LOSSES INCURRED BY GEISINGER OR ANOTHER PARTY DUE TO SOMEONE ELSE USING YOUR PASSWORD. YOU MAY NOT USE ANYONE ELSE'S ACCOUNT AT ANY TIME WITHOUT THE PERMISSION OF THE ACCOUNT HOLDER.
-Geisinger reserves the right to change the terms and conditions of its online payment service. You are responsible for regularly reviewing these terms and conditions. Your continued use of the on-line payment service constitutes your agreement to all such terms.
+Disclaimer of Tort Liability
+The foregoing remedies are exclusive, and You waive and release all other warranties, obligations, and liabilities of Us and all other remedies, claims, and rights that You may have relating in any way to the Application covered by the terms of this EULA, whether arising from contract, warranty, strict liability or tort or from Our negligence, tort, or other fault, including claims for loss of or damage to the Application.
 
-7. WARRANTY DISCLAIMER
-THIS SITE, INCLUDING ANY CONTENT OR INFORMATION CONTAINED WITHIN IT OR ANY SITE-RELATED SERVICE, IS PROVIDED "AS IS," WITH ALL FAULTS, WITH NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. YOU ASSUME TOTAL RESPONSIBILITY AND RISK FOR YOUR USE OF THIS SITE, SITE-RELATED SERVICES, AND HYPERLINKED appS. NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY GEISINGER OR GEISINGER’S AUTHORIZED REPRESENTATIVES SHALL CREATE A WARRANTY OR IN ANY WAY INCREASE THE SCOPE OF THIS WARRANTY.
-GEISINGER CANNOT ENSURE THAT THE INFORMATION CONTAINED ON ITS SERVER WILL BE AVAILABLE AT ALL TIMES, AND BECAUSE YOU ARE RESPONSIBLE FOR INPUTTING INFORMATION ONTO GEISINGER’S SERVER, GEISINGER CANNOT ENSURE THAT THE INFORMATION PROVIDED ON ITS app WILL BE ACCURATE. THUS, GEISINGER MAKES NO REPRESENTATIONS OR WARRANTIES AS TO THE ACCURACY OF CONTENT OF THIS INFORMATION. GEISINGER HAS PROVIDED THE INFORMATION ON AN "AS IS" BASIS, WITHOUT WARRANTEES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MARCHANTIBILITY OR FITNESS FOR A PARTICULAR PURPOSE. GEISINGER NEITHER WARRANTS THAT THE USE OF THE SITE WILL BE UNINTERRUPTED OR ERROR-FREE, NOR THAT ERRORS WILL BE CORRECTED.
+Indemnification
+You will indemnify, defend and hold harmless Us, Our affiliates, and Our and their respective trustees, officers, directors, agents, independent contractors, employees, consultants, service providers, and applicable third parties (such as licensors and partners) (collectively, the “Indemnified Parties”) from and against any actual or threatened suit, demand or claims, damages, costs, liabilities and expenses (including, but not limited to, damage awards, settlement amounts, and reasonable attorneys’ fees) brought against any Indemnified Parties, arising out of or relating to: (a) Your use of the Application; (b) Your conduct; (c) Your failure to perform Your obligations under this EULA (including, but not limited to, Your violation of this EULA); (d) Your violation of the rights of any third party; and/or (e) use of the Application by anyone else on Your device.
 
-8. WAIVER, RELEASE AND LIMITATION OF LIABILITY
-IN ADDITION, YOU AGREE THAT NEITHER GEISINGER, NOR ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, INFORMATION PROVIDERS OR SUPPLIERS SHALL HAVE ANY LIABILITY TO YOU UNDER ANY THEORY OF LIABILITY OR INDEMNITY IN CONNECTION WITH YOUR USE OF THE SITE OR ANY RELATED APPLICATIONS. YOU HEREBY RELEASE AND FOREVER WAIVE ANY AND ALL CLAIMS YOU MAY HAVE AGAINST GEISINGER, ITS AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, INFORMATION PROVIDERS OR SUPPLIERS (INCLUDING BUT NOT LIMITED TO CLAIMS BASED UPON THE NEGLIGENCE OF ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, INFORMATION PROVIDERS OR SUPPLIERS) FOR LOSSES OR DAMAGES YOU SUSTAIN IN CONNECTION WITH YOUR USE OF THE SITE.
-GEISINGER AND ITS AFFILIATES, SUPPLIERS, AND OTHER THIRD PARTIES MENTIONED ON THIS SITE ARE NEITHER RESPONSIBLE NOR LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, PUNITIVE, OR OTHER DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, THOSE RESULTING FROM LOST PROFITS, LOST DATA, OR BUSINESS INTERRUPTION) ARISING OUT OF OR RELATING IN ANY WAY TO THE SITE, SITE-RELATED SERVICES AND PRODUCTS, CONTENT OR INFORMATION CONTAINED WITHIN THE SITE, AND/OR ANY HYPERLINKED app, WHETHER BASED ON WARRANTY, CONTRACT, TORT, OR ANY OTHER LEGAL THEORY AND WHETHER OR NOT ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. YOUR SOLE REMEDY FOR DISSATISFACTION WITH THE SITE, SITE-RELATED SERVICES, AND/OR HYPERLINKED appS IS TO STOP USING THE SITE AND/OR THOSE SERVICES. FURTHER, GEISINGER IS NOT RESPONSIBLE OR LIABLE FOR ANY DEFAMATORY, OFFENSIVE OR ILLEGAL USE OR CONDUCT OF A USER OF THIS SITE.
+General
+This EULA constitutes the entire agreement between You and Us, and supersedes any and all prior proposals, agreements or communications, written or oral with respect to the subject matter hereof. This EULA may not be modified, altered or amended, except by written instrument executed by both Us. You may not assign or otherwise transfer this EULA to anyone. All disputes arising from or relating to this EULA will be within the exclusive jurisdiction of the state and/or federal courts located within the Commonwealth of Pennsylvania and You hereby consent to such exclusive jurisdiction and waive objections to venue therein. You and We hereby disclaim the Application of the 1980 U.N. Convention on Contracts for the International Sale of Goods. If any provision of this EULA is found invalid or unenforceable by an arbitrator or a court of competent jurisdiction, the remaining portions will remain in full force and effect, and the invalid provision will be partially enforced to the maximum extent permitted by law to effectuate the purpose of this EULA. If You use any third party services that are accessed through or embedded in the Application, Your use of those services will be governed by the terms of use of those services.
+Other Geisinger Clinic Products and Services
+While using the Application You may be given the opportunity to purchase other of Our products and services. These products and services may contain different or additional terms of use or privacy policies. If You choose to purchase any of those products and services, Your use of them will be governed by those terms and policies.
 
-9. Visitor Chat Rooms and Other Interactive Areas
-Geisinger may, but is not obligated to, monitor or review any areas of the Site where visitors transmit or post Communications or communicate solely with each other, including, but not limited to, chat rooms, bulletin boards, and other user forums, and the content or any such Communications. Geisinger, however, will have no liability related to the content of any such Communications, whether or not arising under the laws of copyright, libel, privacy, obscenity, or otherwise. Geisinger retains the right to remove, in its sole discretion, Communications that include any material deemed abusive, defamatory, obscene, or otherwise inappropriate.
+Third Party Services
+If You use any other third party services that are embedded in, or accessed through, the Application, Your use of those services is subject to the terms of use and privacy policy of those third party services.
 
-10. Links or Pointers to Other Sites
-Geisinger makes no representations whatsoever about any other app that you may access through this Site or any entity that may post its advertisements on this Site. When you access a non-Geisinger site, please understand that it is independent from Geisinger, and that Geisinger has no control over the content on that app. In addition, a hyperlink to a non-Geisinger app does not mean that Geisinger endorses or accepts any responsibility for the content, or the use, of the linked site or its privacy practices that may be different from Geisinger. Geisinger does not represent or endorse the accuracy or reliability of any of the information, content or advertisements contained on, distributed through, linked, downloaded or accessed from any of the services contained on this Site, nor the quality of any products, information or other materials displayed, purchased or obtained by you as a result of an advertisement or any other information or offer in or in connection therewith. It is up to you to take precautions to ensure that whatever you select for your use or download are free of such items as viruses, worms, Trojan horses, and other items of a destructive nature. If you decide to access any of the third party sites linked to this Site, you do this entirely at your own risk.
+Pediatricians Prescribe Play Privacy Policy
 
-11. Hyperlinks to This Site
-Persons constructing other apps may of course link to any of the pages on this Site. However, you may not copy any of the materials from this Site onto your own Web server for any reason. Also, you may not link to isolated elements on this Site (including photographs, illustrations, diagrams, buttons, text, or any other elements whatsoever) for the purpose of "inlining" them into the context of other web pages, or for linking such isolated elements to other web pages. In other words, link to entire pages on this Site, or don't link at all. Any other use will be a violation of copyright and could subject you to legal action.
+Effective Date: July 3, 2019
 
-12. Caching
-Web mirror sites, and commercial online services, may request written permission to cache this entire Site to their hard drives for the purpose of enabling people to access it more easily or view it more rapidly. Note, however, that under no circumstances will they be granted the right to copy parts of the Site piecemeal, but only to copy the entire Site, preserving all the interior and exterior links, and not employing any of the materials out of their original context.
+This Privacy Policy applies to the Pediatricians Prescribe Play mobile application that is linked to this Privacy Policy (the “Services”) provided by Geisinger Clinic or its affiliates (“Geisinger,” “we,” “us,” or “our”).
 
-13. Choice of Law and Venue
-These Terms of Use are entered into in the Commonwealth of Pennsylvania and shall be governed by and construed in accordance with the laws of Commonwealth of Pennsylvania, exclusive of its choice of law rules. By accessing, transmitting or viewing any information on this Site, you agree to be subject to personal jurisdiction in the state courts sitting in Montour County, Pennsylvania and the federal courts of the Middle District of Pennsylvania, and waives any jurisdictional, venue, or inconvenient forum objections to such courts. In any action to enforce these Terms of Use, the prevailing party will be entitled to costs and attorneys’ fees. In the event that any of the Terms of Use are held by a court or other tribunal of competent jurisdiction to be unenforceable, such provisions shall be limited or eliminated to the minimum extent necessary so that these Terms of Use shall otherwise remain in full force and effect. Any cause of action or claim you may have with respect to your use of Geisinger’s app must be commenced within one (1) year after the claim or cause of action arises. Geisinger’s failure to insist upon or enforce strict performance of any provision of these Terms of Use shall not be construed as a waiver of any provision or right.
+IMPORTANT NOTE: This Privacy Policy applies to individually identifiable information that you provide to us for purposes of obtaining information through the Services (such information is also referred to as “Protected Health Information” or “PHI”), which is subject to our Health Insurance Portability and Accountability Act Notice of Privacy Practices (the “HIPAA Notice”), and information that is not PHI. The HIPAA Notice describes how we can use and share your PHI and also describes your rights with respect to your PHI. This Privacy Policy supplements the HIPAA Notice for PHI. If there is ever any conflict between this Privacy Policy and the HIPAA Notice, the HIPAA Notice will apply. The HIPAA Notice does not apply to information that is not PHI.
 
-14. Indemnification
-You agree to indemnify, defend and hold harmless Geisinger, its affiliates, officers, directors, employees, agents, suppliers and licensors from and against all losses, expenses, damages and costs, including reasonable attorneys' fees, resulting from any violation of these Terms of Use or any activity related to your use of the  Site or account (including negligent or wrongful conduct) by you or any other person accessing the Site using your account or password.
+The Geisinger Notice of Privacy Practices is a separate document that governs how medical information about you may be used and disclosed by Geisinger Clinic. The Geisinger Notice of Privacy Practices is available via the following address:
 
-15. Third Party Rights
-The provisions of paragraphs 8 (Waiver, Release and Limitation of Liability) and 14 (Indemnification) and are for the benefit of Geisinger and its affiliates, officers, directors, employees, agents, suppliers and licensors. Each of these individuals or entities shall have the right to assert and enforce those provisions directly against you on its own behalf.
+https://www.geisinger.org/about-geisinger/corporate/corporate-policies/hipaa/notice-of-privacy-practices-ghs
 
-16. Term; Termination
-These Terms of Use shall commence upon your accessing this Site. These Terms of Use may be terminated by Geisinger without notice at any time for any reason. The provisions of the Disclaimer set forth above and of paragraphs 4 (Claims of Copyright Infringement), 13 (Choice of Law and Venue), 14 (Indemnification), and 15 (Third Party Rights) and shall survive any termination of these Terms of Use.
 
-17. Assignment
-Geisinger may assign its rights and duties under these Terms of Use to any party at any time without notice to you.
+I.	Collection of Information
 
-18. Notice
-Geisinger may deliver notice to you under these Terms of Use by means of electronic mail, a general notice on the Site, or by written communication delivered by first class U.S. mail to your address on record in Geisinger’s account information.
+We may collect the following kinds of information when you use a Service:
 
-19. Entire Agreement
-These Terms of Use constitute the entire agreement between Geisinger and you pertaining to the subject matter hereof. In its sole discretion, Geisinger may from time to time revise these Terms of Use by updating this posting. In the event of substantive changes, you will be prompted to review and accept the Terms of Use. Certain provisions of these Terms of Use may be superseded by expressly designated legal notices or terms located on particular pages within this Site. Neither the course of conduct between the parties nor trade practice shall act to modify any provision of these Terms of Use.
+Information you provide directly to us. For certain Services or activities, such as when you register with a Service, subscribe to our alerts, or contact us directly, we may collect some or all of the following types of information:
+
+•Contact information, such as your full name, email address, mobile phone number, and address;
+•Username and password;
+•Payment information, such as your credit card number, expiration date, and credit card security code;
+•Personal health information, including information about your diagnosis, previous treatments, general health, and health insurance;
+•Doctor reviews; and
+•Any other information you provide to us.
+
+We may combine such information with information we already have about you.
+
+Information we collect automatically. We may collect certain information automatically when you use our Services, such as your computer’s Internet protocol (IP) address, device and advertising identifiers, browser type, operating system, Internet service provider, pages that you visit before and after using the Services, the date and time of your visit, information about the links you click and pages you view within the Services, and other standard server log information. We may also collect certain location information when you use our Services, such as your mobile device’s GPS signal, or information about nearby WiFi access points and cell towers.
+
+We may use cookies, pixel tags, Local Shared Objects, and similar technologies to automatically collect this information. Cookies are small bits of information that are stored by your computer’s web browser. Pixel tags are very small images or small pieces of data embedded in images, also known as “web beacons” or “clear GIFs,” that can recognize cookies, the time and date a page is viewed, a description of the page where the pixel tag is placed, and similar information from your computer or device. Local Shared Objects (sometimes referred to as “Flash Cookies”) are similar to standard cookies except that they can be larger and are downloaded to a computer or mobile device by the Adobe Flash media player. By using the Services, you consent to our use of cookies and similar technologies.
+
+We may also collect technical data to address and fix technical problems and improve our Services. Your device or browser settings may permit you to control the collection of this technical data. By using the Services, you are consenting to us or any party acting on our behalf collecting this technical data.
+
+Information from Third-Party Services. If you access the Services from an advertisement on a third-party website, application, or other service (a “Third-Party Service”) we may receive information from the owner of the Third-Party Service related to you or that advertisement.
+
+Information we obtain from your health care providers and other sources. In connection with Services that may involve medical treatment, we may collect medical records from your past, current, and future health care providers. This may include information about your diagnosis, previous treatments, general health, laboratory and pathology test results and reports, social histories, any family history of illness, and records about phone calls and emails related to your illness.
+
+We may also receive information about you from other sources, including through third-party services and organizations. We may combine our first-party data, such as your email address or name, with third-party data from other sources and use this to contact you (e.g., through direct mail). For example, if you access third-party services, such as Facebook, Google, or Twitter, through the Services to login to the Services or to share information about your experience on the Services with others, we may collect information from these third-party services.
+
+II. 	Use of Information
+
+We may use the information we collect online to:
+
+•Provide and improve the Services;
+•Contact you;
+•Fulfill your requests for products, services, and information;
+•Send you information about additional clinical services or general wellness from us or on behalf of our affiliates;
+•Analyze the use of the Services and user data to understand and improve the Services;
+•Conduct research using your information, which may be subject to your separate written authorization;
+•Prevent potentially prohibited or illegal activities and otherwise in accordance with our End User License Agreement; and
+•For any other purposes disclosed to you at the time we collect your information or pursuant to your consent.
+
+III.	Sharing of Information
+
+We are committed to maintaining your trust, and we want you to understand when and with whom we may share the information we collect.
+
+•Authorized third-party vendors and service providers. We may share your information with third-party vendors and service providers that help us with specialized services, including billing, payment processing, providing medical advice for telemedicine services, management and hosting of telemedicine services, customer service, email deployment, business analytics, marketing (including but not limited to advertising, attribution, deep-linking, direct mail, mobile marketing, optimization and retargeting) advertising, performance monitoring, hosting, and data processing. These third-party vendors and service providers may not use your information for purposes other than those related to the services they are providing to us.
+
+•Corporate affiliates. We may share your information with our affiliates.
+
+•Legal purposes. We may disclose information to respond to subpoenas, court orders, legal process, law enforcement requests, legal claims or government inquiries, and to protect and defend the rights, interests, health, safety, and security of Geisinger, our affiliates, patients, users, or the public.
+
+•Business Transfers. HIPAA permits organizations to transfer PHI in certain circumstances. We can transfer your information as part of a transfer of the assets of the organization, merger, or consolidation or in the unlikely event of bankruptcy, if such transfer is permissible under HIPAA and the HIPAA Notice.
+
+•Protected Health Information. We may transfer your PHI as described in the HIPAA Notice and permitted under HIPAA.
+
+•With your consent or at your direction. We may share information for any other purposes disclosed to you at the time we collect the information or pursuant to your consent or direction.
+
+If you choose to engage in public activities on the third party sites that we link to, you should be aware that any information you share there can be read, collected, or used by other users of these sites and forums. You should use caution in disclosing personal information while participating in these areas. We are not responsible for the information you choose to submit in public areas.
+
+No information provided by patients during medical consultations or requests for medical appointments is ever used for marketing purposes.
+
+IV.	Security
+
+We use measures to protect Protected Health Information from loss, theft, misuse, and unauthorized access, disclosure, alteration, and destruction in accordance with HIPAA. We use measures designed to protect other information from loss, theft, misuse, and unauthorized access, disclosure, alteration, and destruction. You should understand that no data storage system or transmission of data over the Internet or any other public network can be guaranteed to be 100 percent secure.
+
+V.	Your Choices
+
+You may also request that we delete your personal information by sending us an email at pedsprescribeplay@geisinger.edu  We will delete such information unless we are required to maintain information in accordance with applicable law.
+
+You may be able to refuse or disable cookies by adjusting your web browser settings. Because each web browser is different, please consult the instructions provided by your web browser (typically in the “help” section). Please note that you may need to take additional steps to refuse or disable Local Shared Objects and similar technologies. If you choose to refuse, disable, or delete these technologies, some of the functionality of the Services may no longer be available to you.
+
+We do not share Protected Health Information with third parties for their own direct marketing purposes.
+
+VI.	Third-party Links and Content
+
+Some of the Services may contain links to content maintained by third parties that we do not control. We are not responsible for the privacy practices of these third parties, and the information practices of these third parties are not covered by this Privacy Policy.
+
+VII.	Limiting Data Collection and Do Not Track
+
+Opt-Out. To opt out of interest-based advertising across browsers and devices from companies that participate in the Digital Advertising Alliance or Network Advertising Initiative opt-out programs, please visit their respective websites. You may also be able to opt out of interest-based advertising through the settings within the mobile app or your mobile device, but your opt-out choice may apply only to the browser or device you are using when you opt out, so you should opt out on each of your browsers and devices if you want to disable interest-based advertising for those browsers and devices. If you opt out, you will still receive ads but they may not be as relevant to you and your interests, and your experience on our Services may be degraded.
+
+Do-Not-Track Signals and Similar Mechanisms. Some mobile devices and web browsers transmit “do-not-track” signals to mobile applications and websites. Because of differences in how devices and web browsers incorporate and activate this feature, it is not always clear whether users intend for these signals to be transmitted, or whether they even are aware of them. We currently do not take action in response to these signals.
+
+IX.	Children
+
+We do not knowingly allow individuals under the age of 18 to create accounts that allow access to our Services.
+
+X.	Changes to the Privacy Policy
+
+We may update this Privacy Policy from time to time. When we update the Privacy Policy, we will revise the “Effective Date” date above and post the new Privacy Policy. We recommend that you review the Privacy Policy each time you visit the Services to stay informed of our privacy practices.
 `;
