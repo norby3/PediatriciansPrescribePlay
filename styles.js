@@ -55,6 +55,15 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     marginTop: 30,
   },
+  containerActivity2: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    //alignItems: 'center',
+    backgroundColor: 'white',
+    //marginTop: 30,
+  },
+
   videoView: {
     width: width,
     height: splitPanelHeight,
@@ -332,12 +341,12 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   coreLoopTextPoints: {
-    fontSize: 96,
+    fontSize: 60,
     fontWeight: 'bold',
     color: 'white',
-    backgroundColor: 'red',
+    backgroundColor: 'orange',
     borderWidth: 3,
-    borderColor: 'red',
+    borderColor: 'darkorange',
     borderRadius: 10,
     overflow: "hidden",
     textAlign: 'center',

@@ -36,3 +36,9 @@ export const SET_GAME = 'SET_GAME';
 export const SET_PLAYERS = 'SET_PLAYERS';
 export const INCREMENT_ACTIVITY_VIDEO_INDEX = 'INCREMENT_ACTIVITY_VIDEO_INDEX';
 export const INCREMENT_GIF_CELEBRATION_INDEX = 'INCREMENT_GIF_CELEBRATION_INDEX';
+
+// Dance Party Bonus Sessions
+export const NEW_BONUS_SESSION = 'NEW_BONUS_SESSION';
+
+
+// end of doc

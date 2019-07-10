@@ -30,6 +30,7 @@ class ChoosePlayers extends React.Component {
 
     this.state = {
       players: [],
+      selectedPlayersFirstName: [],
     }
   };
 
@@ -53,42 +54,50 @@ class ChoosePlayers extends React.Component {
     this.focusListener.remove();
   }
 
+  // playerSelected() {
+  //   //console.log(`this.state.phone.length == 10 ${this.state.phone.length == 10}`);
+  //
+  //   let playerSelected = false;
+  //   //if( this.state.players && this.state.players.length > 0 ) {
+  //   if(this.state.selectedPlayersFirstName &&
+  //      this.state.selectedPlayersFirstName.length >0) {
+  //      playerSelected = true;
+  //    }
+  //    return playerSelected;
+  // }
   playerSelected() {
-    //console.log(`this.state.phone.length == 10 ${this.state.phone.length == 10}`);
+    return this.state.selectedPlayersFirstName.length > 0;
+  };
 
-    let playerSelected = false;
-    if( this.state.players && this.state.players.length > 0 ) {
-       playerSelected = true;
-     }
-     return playerSelected;
-  }
+  // isThisPlayerSelected(playerName) {
+  //   let isPlayerSel = false;
+  //
+  //   if (this.state.players && this.state.players.length > 0 ) {
+  //       isPlayerSel = this.state.players.includes(playerName);
+  //   }
+  //   return isPlayerSel;
+  // }
 
   isThisPlayerSelected(playerName) {
-    let isPlayerSel = false;
-
-    if (this.state.players && this.state.players.length > 0 ) {
-        isPlayerSel = this.state.players.includes(playerName);
-    }
-    return isPlayerSel;
-  }
+    return this.state.selectedPlayersFirstName.includes(playerName);
+  };
 
 
-  //  add or remove the player to state players
+  //  add or remove the player to state selectedPlayersFirstName
   playerTap = (event, playerName) => {
     console.log(`playerTap event: ${playerName}`);
 
     let updatedPlayers = [];
-    if (this.state.players.includes(playerName)) {
+    if (this.state.selectedPlayersFirstName.includes(playerName)) {
       // remove the player
-      updatedPlayers = this.state.players.filter(e => e !== playerName);
+      updatedPlayers = this.state.selectedPlayersFirstName.filter(e => e !== playerName);
     } else {
       // add the player
-      updatedPlayers = this.state.players.concat(playerName);
+      updatedPlayers = this.state.selectedPlayersFirstName.concat(playerName);
     }
     console.log(`playerTap updatedPlayers: ${JSON.stringify(updatedPlayers)}`);
-    this.setState({players: updatedPlayers});
+    this.setState({selectedPlayersFirstName: updatedPlayers});
   }
-
 
   getPlayerButtonsMyZoo = () => {
     if(this.props.players) {
@@ -141,7 +150,7 @@ class ChoosePlayers extends React.Component {
 
   gotoNext = () => {
     // update the players in app's state viewControl
-    this.props.setPlayers({players: this.state.players});
+    this.props.setPlayers({players: this.state.selectedPlayersFirstName});
 
     if(this.props.viewControl.game === 'MyZoo') {
       this.props.navigation.navigate('MyZooStack');

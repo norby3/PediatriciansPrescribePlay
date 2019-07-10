@@ -233,7 +233,7 @@ class Activity extends Component {
     //console.log(`Activity.js render this.state: ${JSON.stringify(this.state)}`);
 
     return (
-      <View style={styles.containerActivity}>
+      <View style={styles.containerActivity2}>
         <View style={styles.videoView}>
 
           {this.props.isFocused ? this.chooseVideo() : null}

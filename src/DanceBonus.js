@@ -7,7 +7,7 @@ import {
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-//import { tappedDanceBonus } from './actions/viewControlActions';
+import { newBonusSession } from './actions/bonusSessionsActions';
 
 import { Dimensions }       from 'react-native';
 const { width, height } = Dimensions.get('window');
@@ -46,7 +46,10 @@ class DanceBonus extends Component {
         <TouchableOpacity
           key={danceBonus[x].youTubeId}
           style={styles.wideButton3}
-          onPress={() => Youtube(danceBonus[x].youTubeId)}
+          onPress={(event) => this.gotoYoutube(event,
+            danceBonus[x].youTubeId,
+            danceBonus[x].name
+          )}
         >
           <Text style={styles.bigButTxt}> {danceBonus[x].name} </Text>
         </TouchableOpacity>
@@ -55,8 +58,24 @@ class DanceBonus extends Component {
     return danceButtons;
   };
 
+  gotoYoutube = (event, youTubeId, danceName) => {
+    console.log(`DanceBonus.gotoYoutube youTubeId = ${youTubeId} danceName: ${danceName}`);
+
+    let nowMillis = Date.now();
+    let now = new Date(nowMillis);
+
+    this.props.newBonusSession({
+      danceName: danceName,
+      youTubeId: youTubeId,
+      createdAtLocalTimezone: now.toString()
+    });
+
+    Youtube(youTubeId);
+
+  }
+
   render() {
-    //console.log(`DanceBonus.js this.props: ${JSON.stringify(this.props)}`);
+    console.log(`DanceBonus.js this.props: ${JSON.stringify(this.props)}`);
     return (
       <ScrollView contentContainerStyle={{flexGrow: 1}}
         keyboardShouldPersistTaps='handled'
@@ -79,16 +98,16 @@ class DanceBonus extends Component {
   }
 }
 
-// DanceBonus.propTypes = {
-//   tappedDanceBonus: PropTypes.func.isRequired
-// };
+DanceBonus.propTypes = {
+  newBonusSession: PropTypes.func.isRequired
+};
 
 const mapStateToProps = state => ({
   family: state.family,
   viewControl: state.viewControl,
   players: state.players,
   sessions: state.sessions,
+  bonusSessions: state.bonusSessions,
 });
 
-//export default connect(mapStateToProps, {tappedDanceBonus})(DanceBonus);
-export default connect(mapStateToProps, {})(DanceBonus);
+export default connect(mapStateToProps, {newBonusSession})(DanceBonus);

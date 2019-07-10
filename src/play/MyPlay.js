@@ -68,27 +68,27 @@ class MyPlay extends React.Component {
     console.log(`MyPlay.render props: ${JSON.stringify(this.props)}`);
 
     return (
-        <View style={styles.outerView3}>
+      <View style={styles.outerView3}>
 
-            <Text style={styles.coreLoopText1}>Do The Video</Text>
-            <Text style={styles.coreLoopText1}>Earn The Points</Text>
+        <View style={{alignItems: 'center', width: width, marginVertical: 10}}>
+          <Text style={styles.coreLoopTextPoints}>
 
-            <View style={{alignItems: 'center', width: width, marginVertical: 10}}>
-              <Text style={styles.coreLoopTextPoints}>
+            { VIDEO_SEQUENCE[this.props.viewControl.activityVideoIndex].points } Points
 
-                { VIDEO_SEQUENCE[this.props.viewControl.activityVideoIndex].points }
-
-              </Text>
-            </View>
-
-            <TouchableOpacity
-              style={styles.bigBut2}
-              onPress={(event) => this.handleSubmit(event, "GO")}
-            >
-              <Text style={styles.bigButTxt}>GO</Text>
-            </TouchableOpacity>
-
+          </Text>
         </View>
+        <Text style={styles.coreLoopText1}>Do The Video</Text>
+        <Text style={styles.coreLoopText1}>Earn The Points</Text>
+
+
+        <TouchableOpacity
+          style={styles.bigBut2}
+          onPress={(event) => this.handleSubmit(event, "GO")}
+        >
+          <Text style={styles.bigButTxt}>GO</Text>
+        </TouchableOpacity>
+
+      </View>
     );
   }
 }
