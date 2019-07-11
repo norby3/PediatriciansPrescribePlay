@@ -207,7 +207,6 @@ class AdultSignup extends Component {
               blurOnSubmit={false}
               onSubmitEditing={() => {
                 Keyboard.dismiss();
-                this.nextButton.focus();
               }}
             />
           </View>

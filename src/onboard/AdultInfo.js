@@ -160,7 +160,6 @@ class AdultInfo extends Component {
               ref={selector => { this.selector = selector; }}
               onChange={(option) => {
                 this.setState({relationship: `${option.label}`});
-                this.nextButton.focus();
               }}
               >
                 <TextInput
