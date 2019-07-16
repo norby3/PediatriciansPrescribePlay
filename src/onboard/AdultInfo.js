@@ -136,7 +136,7 @@ class AdultInfo extends Component {
             <TextInput
                 style={styles.textInput}
                 underlineColorAndroid="transparent"
-                placeholder="yourname@gmail.com"
+                placeholder=""
                 placeholderTextColor="grey"
                 autoCapitalize={'none'}
                 keyboardType={'email-address'}

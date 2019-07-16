@@ -87,7 +87,7 @@ class Home extends Component {
               <View style={styles.twoPanel}>
 
                 <Text style={styles.bigButTxt}>MyZoo</Text>
-                <Text style={styles.bigButTxt}>age 5+</Text>
+                <Text style={styles.bigButTxt}>ages 5-8</Text>
               </View>
             </View>
 
@@ -109,7 +109,7 @@ class Home extends Component {
               </View>
               <View style={styles.twoPanel}>
                 <Text style={styles.bigButTxt}>MyPlay</Text>
-                <Text style={styles.bigButTxt}>age 9+</Text>
+                <Text style={styles.bigButTxt}>ages 9-12</Text>
               </View>
             </View>
 

@@ -116,7 +116,7 @@ class Activity extends Component {
     switch(this.state.zooActivityCounter) {
     case 1:
       return(
-        <Video source={require('../../assets/videos/video1.mov')}
+        <Video source={require('../../assets/videos/mascot_arm_movements.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
@@ -132,7 +132,7 @@ class Activity extends Component {
       break;
     case 2:
       return(
-        <Video source={require('../../assets/videos/video2.mp4')}
+        <Video source={require('../../assets/videos/mascot_gavin_jumping_jacks.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
@@ -148,7 +148,7 @@ class Activity extends Component {
       break;
     case 3:
       return(
-        <Video source={require('../../assets/videos/video3.mp4')}
+        <Video source={require('../../assets/videos/mascot_boy_squats.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
@@ -164,7 +164,7 @@ class Activity extends Component {
       break;
     case 4:
       return(
-        <Video source={require('../../assets/videos/video4.mp4')}
+        <Video source={require('../../assets/videos/mascot_kids_running.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
@@ -180,7 +180,7 @@ class Activity extends Component {
       break;
     case 5:
       return(
-        <Video source={require('../../assets/videos/video5.mp4')}
+        <Video source={require('../../assets/videos/mascot_gavin_mtn_climbers.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
@@ -196,7 +196,7 @@ class Activity extends Component {
       break;
     case 6:
       return(
-        <Video source={require('../../assets/videos/video6.mp4')}
+        <Video source={require('../../assets/videos/mascot_3kids_dancin.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
@@ -212,7 +212,7 @@ class Activity extends Component {
       break;
     default:
       return(
-        <Video source={require('../../assets/videos/video1.mp4')}
+        <Video source={require('../../assets/videos/mascot_arm_movements.mp4')}
           ref={(ref) => {
             this.player = ref
           }}
