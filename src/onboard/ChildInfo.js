@@ -164,7 +164,8 @@ class ChildInfo extends Component {
 
     return (
       <ScrollView contentContainerStyle={{flexGrow: 1}}
-        keyboardShouldPersistTaps='handled'
+        keyboardShouldPersistTaps='never'
+        keyboardDismissMode='on-drag'
       >
         <View style={styles.outerView2}>
 
@@ -175,12 +176,13 @@ class ChildInfo extends Component {
               underlineColorAndroid="transparent"
               placeholder=""
               placeholderTextColor="grey"
-              onChangeText={(childFirstName) => this.setState({childFirstName: childFirstName})}
+              onChangeText={(childFirstName) => {
+                this.setState({childFirstName: childFirstName});
+              }}
               value={this.state.childFirstName}
               textContentType={'givenName'}
               maxLength={20}
-              ref={(input) => { this.inputChildFirstName = input }}
-              blurOnSubmit={false}
+              ref={(input) => { this.inputChildFirstName = input; }}
               onSubmitEditing={() => {
                 this.inputChildLastName.focus();
               }}
@@ -196,11 +198,16 @@ class ChildInfo extends Component {
               placeholderTextColor="grey"
               textContentType={'familyName'}
               maxLength={20}
-              onChangeText={(childLastName) => this.setState({childLastName: childLastName})}
+              onChangeText={(childLastName) => {
+                this.setState({childLastName: childLastName});
+              }}
               value={this.state.childLastName}
-              ref={(input) => { this.inputChildLastName = input }}
-              blurOnSubmit={false}
-              onSubmitEditing={() => { this.inputBirthdateMonth.focus() }}
+              ref={(input) => {
+                this.inputChildLastName = input;
+              }}
+              onSubmitEditing={() => {
+                this.inputBirthdateMonth.focus();
+              }}
             />
           </View>
 
@@ -222,8 +229,9 @@ class ChildInfo extends Component {
                       () => this.validateBirthdateMonth() );
                   }}
                   value={this.state.birthdateMonth}
-                  ref={(input) => { this.inputBirthdateMonth = input }}
-                  blurOnSubmit={false}
+                  ref={(input) => {
+                    this.inputBirthdateMonth = input;
+                  }}
                 />
               </View>
               <View style={styles.colInputView}>
@@ -241,8 +249,9 @@ class ChildInfo extends Component {
                       () => this.validateBirthdateDay() );
                   }}
                   value={this.state.birthdateDay}
-                  ref={(input) => { this.inputBirthdateDay = input }}
-                  blurOnSubmit={false}
+                  ref={(input) => {
+                    this.inputBirthdateDay = input;
+                  }}
                 />
               </View>
               <View style={styles.colInputView}>
@@ -260,7 +269,12 @@ class ChildInfo extends Component {
                       () => this.validateBirthdateYear() );
                   }}
                   value={this.state.birthdateYear}
-                  ref={(input) => { this.inputBirthdateYear = input }}
+                  ref={(input) => {
+                    this.inputBirthdateYear = input;
+                  }}
+                  onSubmitEditing={() => {
+                    Keyboard.dismiss();
+                  }}
                 />
               </View>
             </View>
@@ -281,7 +295,7 @@ class ChildInfo extends Component {
                   style={styles.textInput}
                   editable={false}
                   value={this.state.gender}
-                  ref={(input) => { this.inputChildGender = input }}
+                  ref={(input) => { this.inputChildGender = input; }}
                 />
             </ModalSelector>
           </View>
@@ -289,8 +303,12 @@ class ChildInfo extends Component {
           <TouchableOpacity
             style={this.validateForm()? styles.bigBut2 : styles.bigBut2disabled }
             disabled={!this.validateForm()}
-            onPress={(event) => this.handleSubmit(event, "Next")}
-            ref={(input) => { this.nextButton = input }}
+            onPress={(event) => {
+              this.handleSubmit(event, "Next");
+            }}
+            ref={(input) => {
+              this.nextButton = input;
+            }}
           >
             <Text style={styles.bigButTxt}>Next</Text>
           </TouchableOpacity>

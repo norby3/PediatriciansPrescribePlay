@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from '../../styles';
 import {
-  Keyboard,
+//  Keyboard,
   Platform,
   ScrollView,
   StyleSheet,
@@ -69,16 +69,17 @@ class GeisingerLocation extends Component {
     let indexGeiPatient = 0;
     const dataGeiPatient = [
         { key: indexGeiPatient++, section: true, label: 'Choose Your Geisinger Location' },
-        { key: indexGeiPatient++, label: 'I am not a Geisinger patient' },
         { key: indexGeiPatient++, label: 'Mount Pleasant' },
         { key: indexGeiPatient++, label: 'Pittston' },
         { key: indexGeiPatient++, label: 'Other' },
+        { key: indexGeiPatient++, label: 'I am not a Geisinger patient' },
     ];
 
     return (
 
       <ScrollView contentContainerStyle={{flexGrow: 1}}
-        keyboardShouldPersistTaps='handled'
+        keyboardShouldPersistTaps='never'
+        keyboardDismissMode='on-drag'
       >
         <View style={styles.outerView2}>
 
@@ -106,13 +107,18 @@ class GeisingerLocation extends Component {
               center
               //title='Agree'
               checked={this.state.agreeTermsOfService}
-              onPress={() => this.setState({agreeTermsOfService: !this.state.agreeTermsOfService})}
+              onPress={() => {
+                this.setState({agreeTermsOfService: !this.state.agreeTermsOfService});
+              }}
             />
             <Text>I agree to the </Text>
 
             <Text
               style={styles.termsOfServiceLinkText}
-              onPress={() => this.setState({showTermsOfService: !this.state.showTermsOfService})}>
+              onPress={() => {
+                this.setState({showTermsOfService: !this.state.showTermsOfService});
+              }}
+            >
               Geisinger Terms of Service</Text>
           </View>
 

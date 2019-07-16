@@ -93,7 +93,8 @@ class AdultInfo extends Component {
 
     return (
       <ScrollView contentContainerStyle={{flexGrow: 1}}
-        keyboardShouldPersistTaps='handled'
+        keyboardShouldPersistTaps='never'
+        keyboardDismissMode='on-drag'
       >
         <View style={styles.outerView2}>
 
@@ -105,12 +106,17 @@ class AdultInfo extends Component {
                 placeholder=""
                 placeholderTextColor="grey"
                 textContentType={'givenName'}
-                onChangeText={(firstName) => this.setState({firstName: firstName})}
+                onChangeText={(firstName) => {
+                  this.setState({firstName: firstName});
+                }}
                 value={this.state.firstName}
                 maxLength = {20}
-                ref={(input) => { this.inputFieldParentFirstName = input }}
-                onSubmitEditing={() => { this.inputFieldParentLastName.focus() }}
-                blurOnSubmit={false}
+                ref={(input) => {
+                  this.inputFieldParentFirstName = input;
+                }}
+                onSubmitEditing={() => {
+                  this.inputFieldParentLastName.focus();
+                }}
               />
           </View>
 
@@ -122,12 +128,17 @@ class AdultInfo extends Component {
               placeholder=""
               placeholderTextColor="grey"
               textContentType={'familyName'}
-              onChangeText={(lastName) => this.setState({lastName: lastName})}
+              onChangeText={(lastName) => {
+                this.setState({lastName: lastName});
+              }}
               value={this.state.lastName}
               maxLength = {20}
-              ref={(input) => { this.inputFieldParentLastName = input }}
-              blurOnSubmit={false}
-              onSubmitEditing={() => { this.inputFieldParentEmail.focus() }}
+              ref={(input) => {
+                this.inputFieldParentLastName = input;
+              }}
+              onSubmitEditing={() => {
+                this.inputFieldParentEmail.focus();
+              }}
             />
           </View>
 
@@ -141,10 +152,13 @@ class AdultInfo extends Component {
                 autoCapitalize={'none'}
                 keyboardType={'email-address'}
                 textContentType={'emailAddress'}
-                onChangeText={(text) => this.validateEmail(text)}
+                onChangeText={(text) => {
+                  this.validateEmail(text);
+                }}
                 value={this.state.email}
-                ref={(input) => { this.inputFieldParentEmail = input }}
-                blurOnSubmit={false}
+                ref={(input) => {
+                  this.inputFieldParentEmail = input;
+                }}
                 onSubmitEditing={() => {
                   Keyboard.dismiss();
                 }}
@@ -157,7 +171,9 @@ class AdultInfo extends Component {
               data={dataRelationship}
               initValue="Relationship"
               accessible={true}
-              ref={selector => { this.selector = selector; }}
+              ref={selector => {
+                this.selector = selector;
+              }}
               onChange={(option) => {
                 this.setState({relationship: `${option.label}`});
               }}
@@ -174,8 +190,12 @@ class AdultInfo extends Component {
             style={this.validateForm()? styles.bigBut2 : styles.bigBut2disabled }
             onPress={this._gotoNextScreen}
             disabled={!this.validateForm()}
-            onPress={(event) => this.handleSubmit(event, "Next")}
-            ref={(input) => { this.nextButton = input }}
+            onPress={(event) => {
+              this.handleSubmit(event, "Next");
+            }}
+            ref={(input) => {
+              this.nextButton = input;
+            }}
           >
             <Text style={styles.bigButTxt}>Next</Text>
           </TouchableOpacity>

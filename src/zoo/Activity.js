@@ -254,7 +254,7 @@ class Activity extends Component {
              captureAudio={false}
           />
         </View>
-    </View>
+      </View>
     );
   }
 }

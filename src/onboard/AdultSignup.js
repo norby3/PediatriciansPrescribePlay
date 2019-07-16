@@ -116,7 +116,8 @@ class AdultSignup extends Component {
 
     return (
       <ScrollView contentContainerStyle={{flexGrow: 1}}
-        keyboardShouldPersistTaps='handled'
+        keyboardShouldPersistTaps='never'
+        keyboardDismissMode='on-drag'
       >
         <View style={styles.outerView2}>
 
@@ -134,10 +135,13 @@ class AdultSignup extends Component {
                 autoCapitalize={'none'}
                 keyboardType={'phone-pad'}
                 maxLength = {3}
-                onChangeText={(text) => this.validatePhoneField1(text)}
+                onChangeText={(text) => {
+                  this.validatePhoneField1(text);
+                }}
                 value={this.state.phone1}
-                ref={(input) => { this.phoneInputField1 = input }}
-                blurOnSubmit={false}
+                ref={(input) => {
+                  this.phoneInputField1 = input;
+                }}
               />
               <TextInput
                   style={styles.phoneInputField2}
@@ -147,10 +151,11 @@ class AdultSignup extends Component {
                   autoCapitalize={'none'}
                   keyboardType={'phone-pad'}
                   maxLength = {3}
-                  onChangeText={(text) => this.validatePhoneField2(text)}
+                  onChangeText={(text) => {
+                    this.validatePhoneField2(text);
+                  }}
                   value={this.state.phone2}
-                  ref={(input) => { this.phoneInputField2 = input }}
-                  blurOnSubmit={false}
+                  ref={(input) => { this.phoneInputField2 = input; }}
                 />
 
               <TextInput
@@ -161,10 +166,11 @@ class AdultSignup extends Component {
                   autoCapitalize={'none'}
                   keyboardType={'phone-pad'}
                   maxLength = {4}
-                  onChangeText={(text) => this.validatePhoneField3(text)}
+                  onChangeText={(text) => {
+                    this.validatePhoneField3(text);
+                  }}
                   value={this.state.phone3}
-                  ref={(input) => { this.phoneInputField3 = input }}
-                  blurOnSubmit={false}
+                  ref={(input) => { this.phoneInputField3 = input; }}
                 />
 
             </View>
@@ -182,11 +188,16 @@ class AdultSignup extends Component {
               autoComplete="password"
               autoCapitalize="none"
               maxLength={12}
-              onChangeText={(password) => this.setState({password})}
+              onChangeText={(password) => {
+                this.setState({password});
+              }}
               value={this.state.password}
-              ref={(input) => { this.inputFieldPassword = input }}
-              onSubmitEditing={() => { this.inputFieldConfirmPassword.focus() }}
-              blurOnSubmit={false}
+              ref={(input) => {
+                this.inputFieldPassword = input;
+              }}
+              onSubmitEditing={() => {
+                this.inputFieldConfirmPassword.focus();
+              }}
             />
           </View>
 
@@ -201,10 +212,13 @@ class AdultSignup extends Component {
               autoComplete="password"
               autoCapitalize="none"
               maxLength={12}
-              onChangeText={(confirmPassword) => this.setState({confirmPassword})}
+              onChangeText={(confirmPassword) => {
+                this.setState({confirmPassword});
+              }}
               value={this.state.confirmPassword}
-              ref={(input) => { this.inputFieldConfirmPassword = input }}
-              blurOnSubmit={false}
+              ref={(input) => {
+                this.inputFieldConfirmPassword = input;
+              }}
               onSubmitEditing={() => {
                 Keyboard.dismiss();
               }}
@@ -214,11 +228,14 @@ class AdultSignup extends Component {
           <TouchableOpacity
             style={this.validateForm()? styles.bigBut2 : styles.bigBut2disabled }
             disabled={!this.validateForm()}
-            onPress={(event) => this.handleSubmit(event, "Next")}
+            onPress={(event) => {
+              this.handleSubmit(event, "Next");
+            }}
             ref={(input) => { this.nextButton = input }}
           >
             <Text style={styles.bigButTxt}>Next</Text>
           </TouchableOpacity>
+
         </View>
       </ScrollView>
     );
