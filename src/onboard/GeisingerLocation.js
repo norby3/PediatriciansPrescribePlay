@@ -35,7 +35,7 @@ class GeisingerLocation extends Component {
 
     this.state = {
       geisingerLocation: '',
-      agreeTermsOfService: true,
+      agreeTermsOfService: false,
       showTermsOfService: false,
     }
   };

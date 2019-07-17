@@ -33,11 +33,19 @@ class AdultInfo extends Component {
     super(props);
 
     this.state = {
-        firstName: '',
-         lastName: '',
-     relationship: '',
-            email: '',
+      firstName: '',
+      lastName: '',
+      relationship: '',
+      email: '',
+      emailValid: '',
     }
+  }
+
+  handleFocusEmail = () => {
+    console.log(`handleFocusEmail this.state.email ${this.state.email}`);
+  }
+  handleBlurEmail = () => {
+    console.log(`handleBlurEmail this.state.email ${this.state.email}`);
   }
 
   validateEmail = (email) => {
@@ -62,6 +70,7 @@ class AdultInfo extends Component {
       this.state.email.length > 6
     );
   }
+
 
   handleSubmit = event => {
 
@@ -152,9 +161,13 @@ class AdultInfo extends Component {
                 autoCapitalize={'none'}
                 keyboardType={'email-address'}
                 textContentType={'emailAddress'}
+                onFocus={this.handleFocusEmail}
+                onBlur={this.handleBlurEmail}
+
                 onChangeText={(text) => {
-                  this.validateEmail(text);
+                  this.setState({email: text});
                 }}
+
                 value={this.state.email}
                 ref={(input) => {
                   this.inputFieldParentEmail = input;
