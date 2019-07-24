@@ -184,9 +184,13 @@ class AdultSignup extends Component {
               underlineColorAndroid="transparent"
               placeholder="Enter a password"
               placeholderTextColor="grey"
-              secureTextEntry={true}
-              autoComplete="password"
-              autoCapitalize="none"
+
+              secureTextEntry={false}
+              autoComplete='off'
+              autoCapitalize='none'
+              autoCorrect={false}
+              textContentType='none'
+
               maxLength={12}
               onChangeText={(password) => {
                 this.setState({password});
@@ -208,9 +212,12 @@ class AdultSignup extends Component {
               underlineColorAndroid="transparent"
               placeholder="Re-enter password"
               placeholderTextColor="grey"
-              secureTextEntry={true}
-              autoComplete="password"
-              autoCapitalize="none"
+              secureTextEntry={false}
+              autoComplete='off'
+              autoCapitalize='none'
+              autoCorrect={false}
+              textContentType='none'
+
               maxLength={12}
               onChangeText={(confirmPassword) => {
                 this.setState({confirmPassword});

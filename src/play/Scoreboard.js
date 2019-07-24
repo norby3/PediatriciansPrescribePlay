@@ -18,7 +18,9 @@ import {
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { incrementGifCelebrationIndex } from '../actions/viewControlActions';
+import { incrementGifCelebrationIndex,
+        incrementActivityVideoIndex
+       } from '../actions/viewControlActions';
 
 const GIFS = [
    <Image source={require('../../assets/gifs_celebration/0.gif')} />,
@@ -69,6 +71,9 @@ class Scoreboard extends React.Component {
   }
 
   _gotoHome = (event) => {
+    // update viewControl.activityVideoIndex - just +1
+    this.props.incrementActivityVideoIndex();
+
     this.props.navigation.navigate('HomeStack');
   }
 
@@ -123,6 +128,8 @@ class Scoreboard extends React.Component {
 
 Scoreboard.propTypes = {
   incrementGifCelebrationIndex: PropTypes.func.isRequired,
+  incrementActivityVideoIndex: PropTypes.func.isRequired,
+
 };
 
 const mapStateToProps = state => ({
@@ -132,4 +139,5 @@ const mapStateToProps = state => ({
   sessions: state.sessions,
 });
 
-export default connect(mapStateToProps, {incrementGifCelebrationIndex})(Scoreboard);
+export default connect(mapStateToProps,
+  {incrementGifCelebrationIndex, incrementActivityVideoIndex})(Scoreboard);

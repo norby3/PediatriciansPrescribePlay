@@ -22,7 +22,7 @@ const splitPanelHeight = height * 0.40;
 //export default class Activity extends Component {
 class Activity extends Component {
   static navigationOptions = {
-         title: "Follow Me",
+         title: "Copy Us",
     headerLeft: null,
   };
 
@@ -127,6 +127,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
       break;
@@ -143,6 +144,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
       break;
@@ -159,6 +161,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
       break;
@@ -175,6 +178,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
       break;
@@ -191,6 +195,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
       break;
@@ -207,6 +212,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
       break;
@@ -223,6 +229,7 @@ class Activity extends Component {
           //controls={true}
           fullscreen={false}
           resizeMode={'contain'}
+          ignoreSilentSwitch={"ignore"}
         />
       );
     }

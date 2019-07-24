@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { completeSession } from '../actions/sessionActions';
 import { updateTotalScorePlay } from '../actions/playerActions';
-import { incrementActivityVideoIndex } from '../actions/viewControlActions';
 import { VIDEO_SEQUENCE } from './VideoConstants';
 
 class VideoPlayer extends React.Component {
@@ -46,9 +45,6 @@ class VideoPlayer extends React.Component {
         name: playerName,
         totalScorePlay: VIDEO_SEQUENCE[this.props.viewControl.activityVideoIndex].points});
     });
-
-    // update viewControl.activityVideoIndex - just +1
-    this.props.incrementActivityVideoIndex();
 
     this.props.navigation.navigate('Scoreboard');
   };
@@ -143,7 +139,7 @@ class VideoPlayer extends React.Component {
 VideoPlayer.propTypes = {
   completeSession: PropTypes.func.isRequired,
   updateTotalScorePlay: PropTypes.func.isRequired,
-  incrementActivityVideoIndex: PropTypes.func.isRequired,
+  //incrementActivityVideoIndex: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -154,4 +150,4 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { completeSession,
-  updateTotalScorePlay, incrementActivityVideoIndex })(VideoPlayer);
+  updateTotalScorePlay })(VideoPlayer);

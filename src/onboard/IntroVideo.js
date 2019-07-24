@@ -30,6 +30,7 @@ export default class IntroVideo extends Component {
            onError={this.videoError}               // Callback when video cannot be loaded
            style={styles.backgroundVideo}
            onEnd={this.gotoNext}
+           ignoreSilentSwitch={"ignore"}
            />
 
       </View>
