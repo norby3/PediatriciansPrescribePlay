@@ -1,14 +1,14 @@
 import {
-  SET_GEISINGER_LOCATION,
+  SET_CLINIC_LOCATION,
   SET_CELLPHONE_AND_PASSWORD,
   NEW_ADULT,
   NEW_CHILD,
 } from './types';
 
-export const setGeisingerLocation = (inputData) => dispatch => {
-  console.log('familyActions.setGeisingerLocation');
+export const setClinicLocation = (inputData) => dispatch => {
+  console.log('familyActions.setClinicLocation');
   dispatch({
-    type: SET_GEISINGER_LOCATION,
+    type: SET_CLINIC_LOCATION,
     payload: inputData
   });
 }

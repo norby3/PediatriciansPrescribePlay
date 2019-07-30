@@ -64,7 +64,7 @@ export default function(state = playersState, action) {
           return {
             ...item,  // copy the existing item
             totalScorePlay: item.totalScorePlay + action.payload.totalScorePlay,
-            totalMyPlayVideosWatched: state.totalMyPlayVideosWatched + 1
+            totalMyPlayVideosWatched: item.totalMyPlayVideosWatched + 1
           }
         }
         // Leave every other item unchanged

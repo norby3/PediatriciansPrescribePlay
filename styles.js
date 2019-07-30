@@ -484,5 +484,9 @@ export default StyleSheet.create({
   termsOfServiceLinkText: {
     textDecorationLine: 'underline',
   },
+  phoneExplainText: {
+    fontSize: 12,
+    marginVertical: 20,
+  },
 
 });

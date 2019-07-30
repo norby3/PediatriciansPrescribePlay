@@ -14,15 +14,23 @@ class LoadingScreen extends React.Component {
   componentWillMount = () => {
     console.log(`LoadingScreen.componentWillMount - state: ${JSON.stringify(this.props)}`);
 
-    if (this.props.viewControl.onboardComplete) {
+    if (!this.props.viewControl.isIntroVideoComplete) {
+      this.props.navigation.navigate('IntroVideo');
+      return;
+    } else if (this.props.viewControl.isIntroVideoComplete) {
       this.props.navigation.navigate('HomeStack');
       return;
-    } else if (!this.props.viewControl.isOnboard1GeisingerPatientComplete) {
-      this.props.navigation.navigate('OnboardingStack');
+
+    } else if (this.props.viewControl.onboardComplete) {
+        this.props.navigation.navigate('HomeStack');
+        return;
+    } else if (!this.props.viewControl.isOnboard1ClinicLocationComplete) {
+      //this.props.navigation.navigate('OnboardingStack');
+      this.props.navigation.navigate('ClinicLocation');
       return;
-    } else if (!this.props.viewControl.isOnboard2AdultSignupComplete) {
-      this.props.navigation.navigate('AdultSignup');
-      return;
+    // } else if (!this.props.viewControl.isOnboard2AdultSignupComplete) {
+    //   this.props.navigation.navigate('AdultSignup');
+    //   return;
     } else if (!this.props.viewControl.isOnboard3AdultInfoComplete) {
       this.props.navigation.navigate('AdultInfo');
       return;

@@ -1,5 +1,5 @@
 import {
-  SET_GEISINGER_LOCATION,
+  SET_CLINIC_LOCATION,
   SET_CELLPHONE_AND_PASSWORD,
   NEW_ADULT,
   NEW_CHILD,
@@ -10,7 +10,7 @@ const familyState = {};
 export default function(state = familyState, action) {
   console.log(`familyReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
   switch(action.type) {
-    case SET_GEISINGER_LOCATION:
+    case SET_CLINIC_LOCATION:
       return {
         ...state,
         ...action.payload

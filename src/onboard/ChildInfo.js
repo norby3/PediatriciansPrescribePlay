@@ -21,6 +21,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { newChild } from '../actions/familyActions';
 import uuidv4 from 'uuid/v4';
+import AWS from 'aws-sdk';
+import Config from "react-native-config";
 
 function millisToMinutesAndSeconds(millis) {
   var minutes = Math.floor(millis / 60000);
@@ -37,6 +39,18 @@ const DismissKeyboard = ({ children }) => (
     {children}
   </TouchableWithoutFeedback>
 );
+
+const region = 'us-east-2';
+const accessKeyId = Config.AKID;
+const secretAccessKey = Config.SAK;
+
+const tableName = 'myplayrx';
+
+const dynamoDB = new AWS.DynamoDB.DocumentClient({
+  region: region,
+  accessKeyId: accessKeyId,
+  secretAccessKey: secretAccessKey,
+});
 
 
 class ChildInfo extends Component {
@@ -148,8 +162,44 @@ class ChildInfo extends Component {
       gender: this.state.gender,
     });
 
-    this.props.navigation.navigate('IntroVideo');
+    this.insertAwsDb();
+
+    this.props.navigation.navigate('LoadingScreen');
   }
+
+  insertAwsDb = async () => {
+    console.log(`insertAwsDb started`);
+    let stateData = {
+      family: this.props.family,
+      viewControl: this.props.viewControl,
+      players: this.props.players,
+      sessions: this.props.sessions,
+    };
+
+    let params = {
+      Item: {
+        uuid:  this.props.family.uuid,
+        doc: stateData,
+      },
+      //ReturnConsumedCapacity: "TOTAL",
+      //ReturnValues: "ALL_NEW",
+      TableName: tableName,
+    };
+
+    console.log(`insertAwsDb params = ${JSON.stringify(params)}`);
+
+    await dynamoDB.put(params, function(err, data) {
+      if (err) {
+        console.log('error after insertAwsDb dynamoDB.put');
+        console.error(err);
+      }
+      else {
+        console.log('success afterinsertAwsDb  dynamoDB.put');
+        console.log(data);
+      }
+    });
+
+  };
 
   render() {
     console.log(`ChildInfo this.props: ${JSON.stringify(this.props)}`);

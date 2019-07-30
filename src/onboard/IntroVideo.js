@@ -5,13 +5,19 @@ import styles from '../../styles';
 import Video from 'react-native-video';
 import IntroVid from '../../assets/videos/intro.mp4';
 
-export default class IntroVideo extends Component {
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { finishedIntroVideo } from '../actions/viewControlActions';
+
+//export default class IntroVideo extends Component {
+class IntroVideo extends Component {
   static navigationOptions = {
     header: null,
     gesturesEnabled: false,
   }
 
   gotoNext = () => {
+    this.props.finishedIntroVideo();
     this.props.navigation.navigate('Home');
   }
 
@@ -37,3 +43,15 @@ export default class IntroVideo extends Component {
     );
   }
 }
+IntroVideo.propTypes = {
+  finishedIntroVideo: PropTypes.func.isRequired
+};
+
+const mapStateToProps = state => ({
+  family: state.family,
+  viewControl: state.viewControl,
+  players: state.players,
+  sessions: state.sessions,
+});
+
+export default connect(mapStateToProps, {finishedIntroVideo})(IntroVideo);

@@ -54,3 +54,17 @@ buck-out/
 
 # Bundle artifact
 *.jsbundle
+
+# api keys
+.env
+
+# videos and GIFs 
+*.mp4
+*.gif 
+
+# Android app bundle 
+android/app/release/*
+android/app/release/*.*
+
+*_OLD.*
+

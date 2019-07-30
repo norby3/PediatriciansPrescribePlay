@@ -21,6 +21,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setGeisingerLocation } from '../actions/familyActions';
 import { TOS } from './TermsOfService.js';
+import uuidv4 from 'uuid/v4';
 
 class GeisingerLocation extends Component {
 
@@ -56,7 +57,8 @@ class GeisingerLocation extends Component {
       geisingerLocation: this.state.geisingerLocation,
       agreeTermsOfService: this.state.agreeTermsOfService,
       installedAtLocalTimezone: now.toString(),
-      installedAtUTC: now.toUTCString()
+      installedAtUTC: now.toUTCString(),
+      uuid: uuidv4()
     });
 
     this.props.navigation.navigate('AdultSignup');

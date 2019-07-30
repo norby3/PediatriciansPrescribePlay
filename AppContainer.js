@@ -3,8 +3,8 @@ import {
    from 'react-navigation';
 
 import LoadingScreen from './src/LoadingScreen';
-import GeisingerLocation from './src/onboard/GeisingerLocation';
-import AdultSignup from './src/onboard/AdultSignup';
+import ClinicLocation from './src/onboard/ClinicLocation';
+//import AdultSignup from './src/onboard/AdultSignup';
 import AdultInfo from './src/onboard/AdultInfo';
 import ChildInfo from './src/onboard/ChildInfo';
 import IntroVideo from './src/onboard/IntroVideo';
@@ -22,12 +22,12 @@ import VideoPlayer from './src/play/VideoPlayer';
 import Scoreboard from './src/play/Scoreboard';
 
 const OnboardingStack = createStackNavigator({
-  GeisingerLocation: { screen: GeisingerLocation },
-  AdultSignup: { screen: AdultSignup },
+  ClinicLocation: { screen: ClinicLocation },
+  //AdultSignup: { screen: AdultSignup },
   AdultInfo: { screen: AdultInfo},
   ChildInfo: { screen: ChildInfo },
-  IntroVideo: { screen: IntroVideo},
-  }, { initialRouteName: 'GeisingerLocation' }
+  //IntroVideo: { screen: IntroVideo},
+  }, { initialRouteName: 'ClinicLocation' }
 );
 
 const HomeStack = createStackNavigator({
@@ -54,6 +54,7 @@ const MyPlayStack = createStackNavigator({
 
 const SwitchNavigator = createSwitchNavigator({
   LoadingScreen: LoadingScreen,
+  IntroVideo: IntroVideo,
   OnboardingStack: OnboardingStack ,
   HomeStack: HomeStack,
   MyZooStack: MyZooStack,

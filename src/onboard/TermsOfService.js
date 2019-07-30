@@ -1,7 +1,7 @@
 export const TOS =
 `
 PEDIATRICIANS PRESCRIBE PLAY MOBILE APP END USER LICENSE AGREEMENT
-IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT (this “EULA”) AND AS WELL AS THE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP PRIVACY POLICY CAREFULLY. THIS EULA IS BETWEEN YOU (“You” or “Your”) AND GEISINGER CLINIC (“We” or “Us” or “Our”). BY TAPPING ON THE “I ACCEPT” BUTTON WITHIN THIS APPLICATION, YOU ACKNOWLEDGE THAT YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO ALL OF THE TERMS AND CONDITIONS SET FORTH BELOW, YOU ARE NOT PERMITTED TO USE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP (the “Application”).
+IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT (this “EULA”) AND AS WELL AS THE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP PRIVACY POLICY CAREFULLY. THIS EULA IS BETWEEN YOU (“You” or “Your”) AND the healthcare provider (“We” or “Us” or “Our”). BY TAPPING ON THE “I ACCEPT” BUTTON WITHIN THIS APPLICATION, YOU ACKNOWLEDGE THAT YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO ALL OF THE TERMS AND CONDITIONS SET FORTH BELOW, YOU ARE NOT PERMITTED TO USE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP (the “Application”).
 
 License and Restrictions
 We grant You a limited, non-exclusive, non-sublicensable, non-transferable license to use the Application, solely for Your personal, non-commercial use in accordance with the instructions and documentation set forth in this EULA or any parts of the Application (collectively, the “Documentation”). Unless expressly otherwise set forth in this EULA, You may not: (a) modify, translate or create derivative works of the Application or the Documentation; (b) decompile, reverse engineer or reverse assemble any portion of the Application or attempt to discover any source code or underlying ideas or algorithms of the Application; (c) sell, assign, sublicense, rent, lease, loan, provide, distribute or otherwise transfer all or any portion of the Application or the Documentation; (d) make, have made, reproduce or copy the Application or the Documentation; (e) remove or alter any trademark, logo, copyright or other proprietary notices associated with the Application or the Documentation, or make available the Application without reproducing all proprietary notices; (f) cause or permit any other party to do any of the foregoing; or (g) engage in any conduct that, directly or indirectly, violates the terms of this EULA or has a harmful impact on the Application.
@@ -22,7 +22,7 @@ The Application may allow You to use certain public discussion services (e.g., p
 We assume no liability of any kind for any message, data, or item that may be posted by a third party in the Application or which is otherwise sent to You via the Services by a third party. Moreover, We will not be responsible for maintaining backups of any message, data, or item that may be posted or sent via the Services.
 
 Ownership
-The Application and the Documentation, including all images, photographs, animations, text and other audiovisual materials, and any and all patents, copyrights, moral rights, trademarks, trade secrets and any other form of intellectual property rights recognized in any jurisdiction, including applications and registrations for any of the foregoing embodied therein are owned by Us or Our licensors. The Application and the Documentation are licensed, and not sold, to You for use only under the terms of this EULA. We reserve all rights not expressly granted to You. You will not use publicly for publicity, promotion, or otherwise, any logo, name, trade name, service mark, or trademark belonging to Us or Our affiliates or licensors, including, but not limited to the word “Geisinger,” or any simulation, abbreviation, or adaptation of the same, or the name of any of Our employees or agents, without Our prior, written, express consent.
+The Application and the Documentation, including all images, photographs, animations, text and other audiovisual materials, and any and all patents, copyrights, moral rights, trademarks, trade secrets and any other form of intellectual property rights recognized in any jurisdiction, including applications and registrations for any of the foregoing embodied therein are owned by Us or Our licensors. The Application and the Documentation are licensed, and not sold, to You for use only under the terms of this EULA. We reserve all rights not expressly granted to You. You will not use publicly for publicity, promotion, or otherwise, any logo, name, trade name, service mark, or trademark belonging to Us or Our affiliates or licensors, including, but not limited to the word healthcare provider, or any simulation, abbreviation, or adaptation of the same, or the name of any of Our employees or agents, without Our prior, written, express consent.
 
 Term and Termination
 The effective date of this EULA is the date on which You install the Application. This EULA is effective until terminated. You may terminate this EULA at any time by deleting the Application from Your device. This EULA will terminate immediately without notice from Us if You fail to comply with any provision of this EULA. Upon termination, You must delete the Application from Your desktop, laptop, tablet, phone and/or other device on which the Application is installed.
@@ -41,7 +41,7 @@ You will indemnify, defend and hold harmless Us, Our affiliates, and Our and the
 
 General
 This EULA constitutes the entire agreement between You and Us, and supersedes any and all prior proposals, agreements or communications, written or oral with respect to the subject matter hereof. This EULA may not be modified, altered or amended, except by written instrument executed by both Us. You may not assign or otherwise transfer this EULA to anyone. All disputes arising from or relating to this EULA will be within the exclusive jurisdiction of the state and/or federal courts located within the Commonwealth of Pennsylvania and You hereby consent to such exclusive jurisdiction and waive objections to venue therein. You and We hereby disclaim the Application of the 1980 U.N. Convention on Contracts for the International Sale of Goods. If any provision of this EULA is found invalid or unenforceable by an arbitrator or a court of competent jurisdiction, the remaining portions will remain in full force and effect, and the invalid provision will be partially enforced to the maximum extent permitted by law to effectuate the purpose of this EULA. If You use any third party services that are accessed through or embedded in the Application, Your use of those services will be governed by the terms of use of those services.
-Other Geisinger Clinic Products and Services
+Other Healthcare Provider Clinic Products and Services
 While using the Application You may be given the opportunity to purchase other of Our products and services. These products and services may contain different or additional terms of use or privacy policies. If You choose to purchase any of those products and services, Your use of them will be governed by those terms and policies.
 
 Third Party Services
@@ -51,13 +51,12 @@ Pediatricians Prescribe Play Privacy Policy
 
 Effective Date: July 3, 2019
 
-This Privacy Policy applies to the Pediatricians Prescribe Play mobile application that is linked to this Privacy Policy (the “Services”) provided by Geisinger Clinic or its affiliates (“Geisinger,” “we,” “us,” or “our”).
+This Privacy Policy applies to the Pediatricians Prescribe Play mobile application that is linked to this Privacy Policy (the “Services”) provided by the healthcare provider or its affiliates (” “we,” “us,” or “our”).
 
 IMPORTANT NOTE: This Privacy Policy applies to individually identifiable information that you provide to us for purposes of obtaining information through the Services (such information is also referred to as “Protected Health Information” or “PHI”), which is subject to our Health Insurance Portability and Accountability Act Notice of Privacy Practices (the “HIPAA Notice”), and information that is not PHI. The HIPAA Notice describes how we can use and share your PHI and also describes your rights with respect to your PHI. This Privacy Policy supplements the HIPAA Notice for PHI. If there is ever any conflict between this Privacy Policy and the HIPAA Notice, the HIPAA Notice will apply. The HIPAA Notice does not apply to information that is not PHI.
 
-The Geisinger Notice of Privacy Practices is a separate document that governs how medical information about you may be used and disclosed by Geisinger Clinic. The Geisinger Notice of Privacy Practices is available via the following address:
+The Notice of Privacy Practices is a separate document that governs how medical information about you may be used and disclosed by the healthcare provider. The Notice of Privacy Practices is available via the following address:
 
-https://www.geisinger.org/about-geisinger/corporate/corporate-policies/hipaa/notice-of-privacy-practices-ghs
 
 
 I.	Collection of Information
@@ -108,7 +107,7 @@ We are committed to maintaining your trust, and we want you to understand when a
 
 •Corporate affiliates. We may share your information with our affiliates.
 
-•Legal purposes. We may disclose information to respond to subpoenas, court orders, legal process, law enforcement requests, legal claims or government inquiries, and to protect and defend the rights, interests, health, safety, and security of Geisinger, our affiliates, patients, users, or the public.
+•Legal purposes. We may disclose information to respond to subpoenas, court orders, legal process, law enforcement requests, legal claims or government inquiries, and to protect and defend the rights, interests, health, safety, and security of the healthcare provider, our affiliates, patients, users, or the public.
 
 •Business Transfers. HIPAA permits organizations to transfer PHI in certain circumstances. We can transfer your information as part of a transfer of the assets of the organization, merger, or consolidation or in the unlikely event of bankruptcy, if such transfer is permissible under HIPAA and the HIPAA Notice.
 
@@ -126,7 +125,6 @@ We use measures to protect Protected Health Information from loss, theft, misuse
 
 V.	Your Choices
 
-You may also request that we delete your personal information by sending us an email at pedsprescribeplay@geisinger.edu  We will delete such information unless we are required to maintain information in accordance with applicable law.
 
 You may be able to refuse or disable cookies by adjusting your web browser settings. Because each web browser is different, please consult the instructions provided by your web browser (typically in the “help” section). Please note that you may need to take additional steps to refuse or disable Local Shared Objects and similar technologies. If you choose to refuse, disable, or delete these technologies, some of the functionality of the Services may no longer be available to you.
 

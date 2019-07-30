@@ -1,5 +1,6 @@
 import {
-  SET_GEISINGER_LOCATION,
+  FINISHED_INTRO_VIDEO,
+  SET_CLINIC_LOCATION,
   SET_CELLPHONE_AND_PASSWORD,
   NEW_ADULT,
   NEW_CHILD,
@@ -11,11 +12,12 @@ import {
 } from '../actions/types';
 
 const viewControlState = {
-  currentView: 'GeisingerLocation',
-  lastView: 'GeisingerLocation',
+  isIntroVideoComplete: false,
+  currentView: 'IntroVideo',
+  lastView: 'IntroVideo',
   isSessionComplete: false,
-  isOnboard1GeisingerPatientComplete: false,
-  isOnboard2AdultSignupComplete: false,
+  isOnboard1ClinicLocationComplete: false,
+  //isOnboard2AdultSignupComplete: false,
   isOnboard3AdultInfoComplete: false,
   isOnboard4ChildInfoComplete: false,
   isOnboardComplete: false,
@@ -28,12 +30,19 @@ const viewControlState = {
 export default function(state = viewControlState, action) {
   console.log(`viewControlReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
   switch(action.type) {
-    case SET_GEISINGER_LOCATION:
+    case FINISHED_INTRO_VIDEO:
       return {
         ...state,
-        isOnboard1GeisingerPatientComplete: true,
-        currentView: 'AdultSignup',
-        lastView: 'GeisingerLocation'
+        isIntroVideoComplete: true,
+        currentView: 'Home',
+        lastView: 'IntroVideo'
+      };
+    case SET_CLINIC_LOCATION:
+      return {
+        ...state,
+        isOnboard1ClinicLocationComplete: true,
+        currentView: 'AdultInfo',
+        lastView: 'ClinicLocation'
       };
     case SET_CELLPHONE_AND_PASSWORD:
       return {

@@ -123,6 +123,11 @@ class AdultSignup extends Component {
 
           <View style={styles.inputView1}>
 
+            <Text style={styles.phoneExplainText}>
+            Your Geisinger doctor office will use this cellphone number
+            to send you reminders, suggestions, and advice for using
+            the app.</Text>
+
             <Text style={styles.formLabel}>Cellphone Number</Text>
 
             <View style={styles.rowInputView}>

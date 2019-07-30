@@ -16,10 +16,11 @@ import { Youtube } from 'react-native-openanything';
 
 const danceBonus = [
   {'name': 'Baby Shark', youTubeId: 'XqZsoesa55w'},
+  {'name': 'Can\'t Stop the Feeling', youTubeId: 'TgcwKrf8wHM'},
+
   {'name': 'Hokey Pokey', youTubeId: 'd6d6Avbpjf8'},
   {'name': 'Hat Dance', youTubeId: '3JedVIAeBm0'},
 
-  {'name': 'Can\'t Stop the Feeling', youTubeId: 'TgcwKrf8wHM'},
   {'name': 'All In', youTubeId: 'InRpJXnOmoU'},
   {'name': 'Rock Around the Clock', youTubeId: '4uQgwNxFD0Y'},
 

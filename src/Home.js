@@ -13,6 +13,19 @@ import { setGame } from './actions/viewControlActions';
 import { Dimensions }       from 'react-native';
 import Image from 'react-native-scalable-image';
 const { width, height } = Dimensions.get('window');
+import AWS from 'aws-sdk';
+import Config from "react-native-config";
+
+const region = 'us-east-2';
+const accessKeyId = Config.AKID;
+const secretAccessKey = Config.SAK;
+const tableName = 'myplayrx';
+
+const dynamoDB = new AWS.DynamoDB.DocumentClient({
+  region: region,
+  accessKeyId: accessKeyId,
+  secretAccessKey: secretAccessKey,
+});
 
 
 class Home extends Component {
@@ -36,9 +49,30 @@ class Home extends Component {
     this.danceBonus();
   }
 
+  componentDidMount() {
+    const { navigation } = this.props;
+    this.focusListener = navigation.addListener("didFocus", () => {
+      // The screen is focused
+      console.log('Home didFocus listener started');
+      // Call any action
+      if (this.props.viewControl.isOnboardComplete) {
+        this.updateAwsDb();
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    // Remove the event listener
+    this.focusListener.remove();
+  }
+
   handleSubmit = (event, game) => {
-    this.props.setGame({ game: game });
-    this.props.navigation.navigate('ChoosePlayers');
+    if (this.props.viewControl.isOnboardComplete) {
+      this.props.setGame({ game: game });
+      this.props.navigation.navigate('ChoosePlayers');
+    } else {
+      this.props.navigation.navigate('OnboardingStack');
+    }
   }
 
   // if the last session was completed less than 3 hours ago, show Dance Bonus
@@ -59,6 +93,43 @@ class Home extends Component {
     //console.log('xfer to DanceBonus view');
     this.props.navigation.navigate('DanceBonus');
   }
+
+  updateAwsDb = async () => {
+    console.log(`updateAwsDb started`);
+
+    let stateData = {
+      family: this.props.family,
+      viewControl: this.props.viewControl,
+      players: this.props.players,
+      sessions: this.props.sessions,
+      bonusSessions: this.props.bonusSessions,
+    };
+    console.log(`updateAwsDb stateData = ${JSON.stringify(stateData)}`);
+
+    let params = {
+      Item: {
+        uuid:  this.props.family.uuid,
+        doc: stateData,
+      },
+      //ReturnConsumedCapacity: "TOTAL",
+      //ReturnValues: "ALL_NEW",
+      TableName: tableName,
+    };
+
+    console.log(`updateAwsDb params = ${JSON.stringify(params)}`);
+
+    await dynamoDB.put(params, function(err, data) {
+      if (err) {
+        console.log('error after updateAwsDb dynamoDB.put');
+        console.error(err);
+      }
+      else {
+        console.log('success after updateAwsDb dynamoDB.put');
+        console.log(data);
+      }
+    });
+
+  };
 
   render() {
     console.log(`Home.js this.props: ${JSON.stringify(this.props)}`);
@@ -85,7 +156,6 @@ class Home extends Component {
               />
               </View>
               <View style={styles.twoPanel}>
-
                 <Text style={styles.bigButTxt}>MyZoo</Text>
                 <Text style={styles.bigButTxt}>ages 5-8</Text>
               </View>
@@ -115,6 +185,11 @@ class Home extends Component {
 
           </TouchableOpacity>
 
+          { !this.props.viewControl.isOnboardComplete ?
+            <Text style={styles.devOnlyText2}>
+              Signup required to play either game.</Text> : null
+          }
+
           { this.state.showDanceBonusButton ?
             <TouchableOpacity
               style={[styles.wideButton, styles.steelblue]}
@@ -139,7 +214,9 @@ class Home extends Component {
 
             </TouchableOpacity>
           : <Text style={styles.devOnlyText2}>
-            (Complete a game session to earn a Dance Party Bonus)</Text> }
+            Complete a game session to earn a Dance Party Bonus.</Text> }
+
+
 
         </View>
       </ScrollView>
@@ -156,6 +233,7 @@ const mapStateToProps = state => ({
   viewControl: state.viewControl,
   players: state.players,
   sessions: state.sessions,
+  bonusSessions: state.bonusSessions,
 });
 
 //export default connect(mapStateToProps, { newSession })(Home);
