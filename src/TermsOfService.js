@@ -1,7 +1,7 @@
 export const TOS =
 `
-PEDIATRICIANS PRESCRIBE PLAY MOBILE APP END USER LICENSE AGREEMENT
-IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT (this “EULA”) AND AS WELL AS THE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP PRIVACY POLICY CAREFULLY. THIS EULA IS BETWEEN YOU (“You” or “Your”) AND the healthcare provider (“We” or “Us” or “Our”). BY TAPPING ON THE “I ACCEPT” BUTTON WITHIN THIS APPLICATION, YOU ACKNOWLEDGE THAT YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO ALL OF THE TERMS AND CONDITIONS SET FORTH BELOW, YOU ARE NOT PERMITTED TO USE PEDIATRICIANS PRESCRIBE PLAY MOBILE APP (the “Application”).
+MyPlay / PEDIATRICIANS PRESCRIBE PLAY MOBILE APP END USER LICENSE AGREEMENT
+IMPORTANT: PLEASE READ THIS END USER LICENSE AGREEMENT (this “EULA”) AND AS WELL AS THE MyPlayRx / PEDIATRICIANS PRESCRIBE PLAY MOBILE APP PRIVACY POLICY CAREFULLY. THIS EULA IS BETWEEN YOU (“You” or “Your”) AND ClinicNerds (“We” or “Us” or “Our”). BY CREATING A PROFILE WITHIN THIS APPLICATION, YOU ACKNOWLEDGE THAT YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO ALL OF THE TERMS AND CONDITIONS SET FORTH BELOW, YOU ARE NOT PERMITTED TO USE MyPlayRx - PEDIATRICIANS PRESCRIBE PLAY MOBILE APP (the “Application”).
 
 License and Restrictions
 We grant You a limited, non-exclusive, non-sublicensable, non-transferable license to use the Application, solely for Your personal, non-commercial use in accordance with the instructions and documentation set forth in this EULA or any parts of the Application (collectively, the “Documentation”). Unless expressly otherwise set forth in this EULA, You may not: (a) modify, translate or create derivative works of the Application or the Documentation; (b) decompile, reverse engineer or reverse assemble any portion of the Application or attempt to discover any source code or underlying ideas or algorithms of the Application; (c) sell, assign, sublicense, rent, lease, loan, provide, distribute or otherwise transfer all or any portion of the Application or the Documentation; (d) make, have made, reproduce or copy the Application or the Documentation; (e) remove or alter any trademark, logo, copyright or other proprietary notices associated with the Application or the Documentation, or make available the Application without reproducing all proprietary notices; (f) cause or permit any other party to do any of the foregoing; or (g) engage in any conduct that, directly or indirectly, violates the terms of this EULA or has a harmful impact on the Application.
@@ -47,11 +47,11 @@ While using the Application You may be given the opportunity to purchase other o
 Third Party Services
 If You use any other third party services that are embedded in, or accessed through, the Application, Your use of those services is subject to the terms of use and privacy policy of those third party services.
 
-Pediatricians Prescribe Play Privacy Policy
+MyPlayRx / Pediatricians Prescribe Play Privacy Policy
 
 Effective Date: July 3, 2019
 
-This Privacy Policy applies to the Pediatricians Prescribe Play mobile application that is linked to this Privacy Policy (the “Services”) provided by the healthcare provider or its affiliates (” “we,” “us,” or “our”).
+This Privacy Policy applies to the MyPlayRx / Pediatricians Prescribe Play mobile application that is linked to this Privacy Policy (the “Services”) provided by ClinicNerds or its affiliates (” “we,” “us,” or “our”).
 
 IMPORTANT NOTE: This Privacy Policy applies to individually identifiable information that you provide to us for purposes of obtaining information through the Services (such information is also referred to as “Protected Health Information” or “PHI”), which is subject to our Health Insurance Portability and Accountability Act Notice of Privacy Practices (the “HIPAA Notice”), and information that is not PHI. The HIPAA Notice describes how we can use and share your PHI and also describes your rights with respect to your PHI. This Privacy Policy supplements the HIPAA Notice for PHI. If there is ever any conflict between this Privacy Policy and the HIPAA Notice, the HIPAA Notice will apply. The HIPAA Notice does not apply to information that is not PHI.
 

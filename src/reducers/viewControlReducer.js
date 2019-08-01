@@ -1,14 +1,11 @@
 import {
   FINISHED_INTRO_VIDEO,
-  SET_CLINIC_LOCATION,
-  SET_CELLPHONE_AND_PASSWORD,
-  NEW_ADULT,
-  NEW_CHILD,
   SET_GAME,
   SET_PLAYERS,
   INCREMENT_ACTIVITY_VIDEO_INDEX,
   INCREMENT_GIF_CELEBRATION_INDEX,
   COMPLETE_SESSION,
+  CREATE_FAMILY_PROFILE,
 } from '../actions/types';
 
 const viewControlState = {
@@ -16,15 +13,12 @@ const viewControlState = {
   currentView: 'IntroVideo',
   lastView: 'IntroVideo',
   isSessionComplete: false,
-  isOnboard1ClinicLocationComplete: false,
-  //isOnboard2AdultSignupComplete: false,
-  isOnboard3AdultInfoComplete: false,
-  isOnboard4ChildInfoComplete: false,
-  isOnboardComplete: false,
   activityVideoIndex: 0,                     // 0 to 5
   gifCelebrationIndex: 0,
   //game: 'MyZoo',                           // 'Zoo' or 'Play'
   //players: [],
+  shareDataWithDoc: false,
+  familyProfileComplete: false,
 };
 
 export default function(state = viewControlState, action) {
@@ -36,35 +30,6 @@ export default function(state = viewControlState, action) {
         isIntroVideoComplete: true,
         currentView: 'Home',
         lastView: 'IntroVideo'
-      };
-    case SET_CLINIC_LOCATION:
-      return {
-        ...state,
-        isOnboard1ClinicLocationComplete: true,
-        currentView: 'AdultInfo',
-        lastView: 'ClinicLocation'
-      };
-    case SET_CELLPHONE_AND_PASSWORD:
-      return {
-        ...state,
-        isOnboard2AdultSignupComplete: true,
-        currentView: 'AdultInfo',
-        lastView: 'AdultSignup'
-      };
-    case NEW_ADULT:
-      return {
-        ...state,
-        isOnboard3AdultInfoComplete: true,
-        currentView: 'ChildInfo',
-        lastView: 'AdultInfo'
-      };
-    case NEW_CHILD:
-      return {
-        ...state,
-        isOnboard4ChildInfoComplete: true,
-        isOnboardComplete: true,
-        currentView: 'Home',
-        lastView: 'IntroVideo',
       };
     case SET_GAME:
       return {
@@ -96,6 +61,12 @@ export default function(state = viewControlState, action) {
         lastSessionCompletedAtLocalTimezone: action.payload.finishedAtLocalTimezone,
         lastSessionCompletedAtUTC: action.payload.finishedAtUTC,
         lastSessionCompletedAtMillis: action.payload.finishedAtMillis
+      };
+    case CREATE_FAMILY_PROFILE:
+      return {
+        ...state,
+        shareDataWithDoc: true,
+        familyProfileComplete: true
       };
     default:
       return state;

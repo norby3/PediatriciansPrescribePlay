@@ -1,20 +1,6 @@
 
 // family Actions
-export const SET_CLINIC_LOCATION = 'SET_CLINIC_LOCATION';
-export const SET_CELLPHONE_AND_PASSWORD = 'SET_CELLPHONE_AND_PASSWORD';
-
-// family & player Actions
-export const NEW_ADULT = 'NEW_ADULT';
-export const NEW_CHILD = 'NEW_CHILD';
-// export const SET_ADULT_INFO = 'SET_ADULT_INFO';
-// export const SET_CHILD_INFO = 'SET_CHILD_INFO';
-
-// shared actions for UI data controls
-// SET_GEISINGER_LOCATION -> isScreen1GeisingerPatientComplete
-// SET_CELLPHONE_AND_PASSWORD -> isScreen2AdultSignupComplete
-// NEW_ADULT -> isScreen3AdultInfoComplete
-// NEW_CHILD -> isScreen4ChildInfoComplete
-//    part of NEW_CHILD ??  export const SET_ONBOARDING_COMPLETE = 'SET_ONBOARDING_COMPLETE';
+export const CREATE_FAMILY_PROFILE = 'CREATE_FAMILY_PROFILE';
 
 // player Actions
 // replaced by shared actions NEW_ADULT & NEW_CHILD export const NEW_PLAYER = 'NEW_PLAYER';

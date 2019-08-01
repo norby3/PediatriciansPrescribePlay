@@ -1,4 +1,5 @@
 import {
+  CREATE_FAMILY_PROFILE,
   SET_CLINIC_LOCATION,
   SET_CELLPHONE_AND_PASSWORD,
   NEW_ADULT,
@@ -10,6 +11,17 @@ const familyState = {};
 export default function(state = familyState, action) {
   console.log(`familyReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);
   switch(action.type) {
+    case CREATE_FAMILY_PROFILE:
+      return {
+        ...state,
+        uuid: action.payload.uuid,
+        adultFirstName: action.payload.adultFirstName,
+        adultLastName: action.payload.adultLastName,
+        childFirstName: action.payload.childFirstName,
+        childLastName: action.payload.childLastName,
+        hospital: action.payload.hospital,
+        doctor: action.payload.doctor,
+      }
     case SET_CLINIC_LOCATION:
       return {
         ...state,

@@ -1,4 +1,5 @@
 import {
+  CREATE_FAMILY_PROFILE,
   NEW_ADULT,
   NEW_CHILD,
   UPDATE_TOTAL_SCORE_ZOO,
@@ -19,6 +20,15 @@ export default function(state = playersState, action) {
         totalScorePlay: 0,
         totalMyPlayVideosWatched: 0,
       });
+    case CREATE_FAMILY_PROFILE:
+      return state.concat({
+        name: action.payload.childFirstName,
+        uuid: action.payload.uuid,
+        totalScoreZoo: 1,
+        totalScorePlay: 0,
+        totalMyPlayVideosWatched: 0,
+      });
+
 
     // case NEW_ADULT:
     //   console.log(`playerReducer state = ${JSON.stringify(state)} action = ${JSON.stringify(action)}`);

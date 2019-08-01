@@ -41,7 +41,7 @@ class AddPlayer extends Component {
   validateForm() {
     //console.log(`this.state.phone.length == 10 ${this.state.phone.length == 10}`);
     return (
-      this.state.name.length > 2
+      this.state.name.length >= 2
     );
   }
 

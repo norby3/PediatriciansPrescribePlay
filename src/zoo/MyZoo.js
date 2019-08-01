@@ -17,7 +17,6 @@ import { newSession } from '../actions/sessionActions';
 
 const { width, height } = Dimensions.get('window');
 
-//export default class MyZoo extends Component {
 class MyZoo extends Component {
 
   constructor(props) {
@@ -116,9 +115,9 @@ class MyZoo extends Component {
 
         <View style={styles.myZooView}>
           <Text style={styles.coreLoopText1}>
-            { (this.props.family.childFirstName.toLowerCase().slice(-1) === 's') ?
-               this.props.family.childFirstName + "'" :
-               this.props.family.childFirstName + "'s"
+            { (this.props.players[0].name.toLowerCase().slice(-1) === 's') ?
+               this.props.players[0].name + "'" :
+               this.props.players[0].name + "'s"
             } Zoo</Text>
           <Text>&nbsp;</Text>
 

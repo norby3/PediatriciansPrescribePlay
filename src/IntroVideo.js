@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
-import styles from '../../styles';
+import styles from '../styles';
 
 import Video from 'react-native-video';
-import IntroVid from '../../assets/videos/intro.mp4';
+import IntroVid from '../assets/videos/intro.mp4';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { finishedIntroVideo } from '../actions/viewControlActions';
+import { finishedIntroVideo } from './actions/viewControlActions';
 
-//export default class IntroVideo extends Component {
 class IntroVideo extends Component {
   static navigationOptions = {
     header: null,

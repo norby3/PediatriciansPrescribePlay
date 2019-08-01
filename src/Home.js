@@ -55,7 +55,7 @@ class Home extends Component {
       // The screen is focused
       console.log('Home didFocus listener started');
       // Call any action
-      if (this.props.viewControl.isOnboardComplete) {
+      if (this.props.viewControl.shareDataWithDoc) {
         this.updateAwsDb();
       }
     });
@@ -67,12 +67,13 @@ class Home extends Component {
   }
 
   handleSubmit = (event, game) => {
-    if (this.props.viewControl.isOnboardComplete) {
-      this.props.setGame({ game: game });
-      this.props.navigation.navigate('ChoosePlayers');
-    } else {
-      this.props.navigation.navigate('OnboardingStack');
-    }
+    this.props.setGame({ game: game });
+    this.props.navigation.navigate('ChoosePlayers');
+  }
+
+  createFamilyProfile = () => {
+    console.log('goto FamilyProfile');
+    this.props.navigation.navigate('FamilyProfile');
   }
 
   // if the last session was completed less than 3 hours ago, show Dance Bonus
@@ -185,11 +186,6 @@ class Home extends Component {
 
           </TouchableOpacity>
 
-          { !this.props.viewControl.isOnboardComplete ?
-            <Text style={styles.devOnlyText2}>
-              Signup required to play either game.</Text> : null
-          }
-
           { this.state.showDanceBonusButton ?
             <TouchableOpacity
               style={[styles.wideButton, styles.steelblue]}
@@ -216,8 +212,35 @@ class Home extends Component {
           : <Text style={styles.devOnlyText2}>
             Complete a game session to earn a Dance Party Bonus.</Text> }
 
-
-
+            <Text> </Text>
+            <Text> </Text>
+            {this.props.viewControl.familyProfileComplete? null :
+            <TouchableOpacity
+              style={styles.wideButton}
+              onPress={(event) => this.createFamilyProfile(event, "FamilyProfile")}
+              ref={(input) => { this.nextButton = input }}
+            >
+              <View style={styles.contentView2}>
+                <View style={styles.twoPanel}>
+                <Image
+                    key="profile"
+                    width={width*0.3}
+                    source={require('../assets/images/profile.png')}
+                    style={styles.zooImage}
+                />
+                </View>
+                <View style={styles.twoPanel}>
+                  <Text style={styles.bigButTxt}>Profile</Text>
+                  <Text style={styles.bigButTxt}></Text>
+                </View>
+              </View>
+            </TouchableOpacity>
+            }
+            <Text style={styles.termsOfServiceText}>
+              All videos created by Max Cornell, Mark Mandell, and Jino Park
+               and released in the public domain under
+               Creative Commons Attribution 4.0 International License.
+            </Text>
         </View>
       </ScrollView>
     );

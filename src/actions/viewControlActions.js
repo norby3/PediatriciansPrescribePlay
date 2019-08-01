@@ -13,7 +13,6 @@ export const finishedIntroVideo = (inputData) => dispatch => {
   });
 }
 
-
 export const setGame = (inputData) => dispatch => {
   dispatch({
     type: SET_GAME,

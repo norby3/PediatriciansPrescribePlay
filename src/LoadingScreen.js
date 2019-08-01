@@ -20,23 +20,6 @@ class LoadingScreen extends React.Component {
     } else if (this.props.viewControl.isIntroVideoComplete) {
       this.props.navigation.navigate('HomeStack');
       return;
-
-    } else if (this.props.viewControl.onboardComplete) {
-        this.props.navigation.navigate('HomeStack');
-        return;
-    } else if (!this.props.viewControl.isOnboard1ClinicLocationComplete) {
-      //this.props.navigation.navigate('OnboardingStack');
-      this.props.navigation.navigate('ClinicLocation');
-      return;
-    // } else if (!this.props.viewControl.isOnboard2AdultSignupComplete) {
-    //   this.props.navigation.navigate('AdultSignup');
-    //   return;
-    } else if (!this.props.viewControl.isOnboard3AdultInfoComplete) {
-      this.props.navigation.navigate('AdultInfo');
-      return;
-    } else if (!this.props.viewControl.isOnboard4ChildInfoComplete) {
-      this.props.navigation.navigate('ChildInfo');
-      return;
     } else {
       this.props.navigation.navigate('HomeStack');
       return;

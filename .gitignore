@@ -56,15 +56,14 @@ buck-out/
 *.jsbundle
 
 # api keys
-.env
+.env_real
 
-# videos and GIFs 
+# videos and GIFs
 *.mp4
-*.gif 
+*.gif
 
-# Android app bundle 
+# Android app bundle
 android/app/release/*
 android/app/release/*.*
 
 *_OLD.*
-

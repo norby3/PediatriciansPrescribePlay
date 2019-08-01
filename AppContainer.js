@@ -3,12 +3,10 @@ import {
    from 'react-navigation';
 
 import LoadingScreen from './src/LoadingScreen';
-import ClinicLocation from './src/onboard/ClinicLocation';
-//import AdultSignup from './src/onboard/AdultSignup';
-import AdultInfo from './src/onboard/AdultInfo';
-import ChildInfo from './src/onboard/ChildInfo';
-import IntroVideo from './src/onboard/IntroVideo';
+
+import IntroVideo from './src/IntroVideo';
 import Home from './src/Home';
+import FamilyProfile from './src/FamilyProfile';
 import DanceBonus from './src/DanceBonus';
 import ChoosePlayers from './src/ChoosePlayers';
 import AddPlayer from './src/AddPlayer';
@@ -21,20 +19,13 @@ import MyPlay from './src/play/MyPlay';
 import VideoPlayer from './src/play/VideoPlayer';
 import Scoreboard from './src/play/Scoreboard';
 
-const OnboardingStack = createStackNavigator({
-  ClinicLocation: { screen: ClinicLocation },
-  //AdultSignup: { screen: AdultSignup },
-  AdultInfo: { screen: AdultInfo},
-  ChildInfo: { screen: ChildInfo },
-  //IntroVideo: { screen: IntroVideo},
-  }, { initialRouteName: 'ClinicLocation' }
-);
 
 const HomeStack = createStackNavigator({
   Home: { screen: Home },
   DanceBonus: { screen: DanceBonus },
   ChoosePlayers: { screen: ChoosePlayers },
   AddPlayer: { screen: AddPlayer },
+  FamilyProfile: { screen: FamilyProfile },
   }, { initialRouteName: 'Home' }
 );
 
@@ -55,7 +46,6 @@ const MyPlayStack = createStackNavigator({
 const SwitchNavigator = createSwitchNavigator({
   LoadingScreen: LoadingScreen,
   IntroVideo: IntroVideo,
-  OnboardingStack: OnboardingStack ,
   HomeStack: HomeStack,
   MyZooStack: MyZooStack,
   MyPlayStack: MyPlayStack,

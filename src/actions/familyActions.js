@@ -1,9 +1,26 @@
 import {
+  CREATE_FAMILY_PROFILE,
   SET_CLINIC_LOCATION,
   SET_CELLPHONE_AND_PASSWORD,
   NEW_ADULT,
   NEW_CHILD,
 } from './types';
+
+export const createFamilyProfile = (inputData) => dispatch => {
+  console.log('familyActions.createFamilyProfile');
+  dispatch({
+    type: CREATE_FAMILY_PROFILE,
+    payload: {
+      uuid: inputData.uuid, 
+      adultFirstName: inputData.adultFirstName,
+      adultLastName: inputData.adultLastName,
+      childFirstName: inputData.childFirstName,
+      childLastName: inputData.childLastName,
+      hospital: inputData.hospital,
+      doctor: inputData.doctor,
+    },
+  });
+}
 
 export const setClinicLocation = (inputData) => dispatch => {
   console.log('familyActions.setClinicLocation');

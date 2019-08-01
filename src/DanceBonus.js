@@ -86,7 +86,13 @@ class DanceBonus extends Component {
 
           { this.getDanceButtons() }
 
+
           <Text> </Text>
+          <Text>These buttons link to YouTube videos and will open
+          the YouTube app.
+          </Text>
+          <Text> </Text>
+
           <Text style={styles.devOnlyText2}>
             New dances are added with each complete game session.
             Maximum of 12 dances.
